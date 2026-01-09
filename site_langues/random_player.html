@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Lecteur Aléatoire - Langues</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .timer-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .timer-display {
+            font-size: 48px;
+            font-weight: 700;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+            display: none;
+        }
+
+        .timer-display.active {
+            display: block;
+        }
+
+        .timer-display.warning {
+            color: #f59e0b;
+        }
+
+        .timer-display.danger {
+            color: #ef4444;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .duration-input {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .duration-input label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .duration-input input {
+            padding: 8px 12px;
+            border: 2px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .player-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .resource-info {
+            margin-bottom: 20px;
+        }
+
+        .resource-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            background: #f7fafc;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .niveau-badge {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .audio-player {
+            width: 100%;
+            margin: 20px 0;
+            height: 70px;
+            min-height: 70px;
+        }
+
+        .content-section {
+            margin-top: 30px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .text-content {
+            line-height: 1.8;
+            color: #4a5568;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-list {
+            list-style: none;
+        }
+
+        .vocab-item {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .vocab-word {
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .vocab-translation {
+            color: #718096;
+            margin-left: 10px;
+        }
+
+        .vocab-highlight {
+            background: linear-gradient(180deg, transparent 60%, #fef08a 60%);
+            font-weight: 600;
+            color: #854d0e;
+            cursor: help;
+            position: relative;
+            padding: 0 2px;
+        }
+
+        .vocab-highlight:hover {
+            background: #fef08a;
+            border-radius: 3px;
+        }
+
+        /* Tooltip tactile pour traduction */
+        .tooltip-bubble {
+            position: absolute;
+            max-width: 80vw;
+            background: rgba(17, 24, 39, 0.95);
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.3;
+            z-index: 1000;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transform: translate(-50%, -8px);
+            pointer-events: none;
+        }
+        .tooltip-bubble::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            transform: translateX(-50%);
+            border-width: 6px 6px 0 6px;
+            border-style: solid;
+            border-color: rgba(17, 24, 39, 0.95) transparent transparent transparent;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 5px;
+        }
+
+        .session-info {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .session-info strong {
+            color: #667eea;
+            font-size: 18px;
+        }
+
+        .filter-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-label {
+            display: block;
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 15px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .timer-display {
+                font-size: 36px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .timer-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .duration-input {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+    <script>
+        document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="theme.js"></script>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-btn">← Terug à l'accueil</a>
+            <h1 class="title">🎲 Lecteur Aléatoire</h1>
+            
+            <div class="session-info" id="sessionInfo">
+                Sélectionnez une langue pour commencer
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label" for="filterNiveau">📊 Niveau :</label>
+                <select id="filterNiveau" class="filter-select" onchange="updateFilteredResources()">
+                    <option value="">Tous les niveaux</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                </select>
+            </div>
+
+            <div class="timer-controls">
+                <div class="timer-display" id="timerDisplay">--:--</div>
+                
+                <div class="duration-input">
+                    <label for="durationMinutes">Durée (min):</label>
+                    <select id="durationMinutes" class="filter-select" style="width: 120px;">
+                        <option value="5">5 min</option>
+                        <option value="10">10 min</option>
+                        <option value="15">15 min</option>
+                        <option value="20" selected>20 min</option>
+                        <option value="25">25 min</option>
+                        <option value="30">30 min</option>
+                        <option value="35">35 min</option>
+                        <option value="40">40 min</option>
+                        <option value="45">45 min</option>
+                        <option value="50">50 min</option>
+                        <option value="55">55 min</option>
+                        <option value="60">60 min</option>
+                        <option value="70">70 min</option>
+                        <option value="80">80 min</option>
+                        <option value="90">90 min</option>
+                        <option value="100">100 min</option>
+                        <option value="110">110 min</option>
+                        <option value="120">120 min</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-success" id="startBtn" onclick="startSession()">▶️ Démarrer</button>
+                <button class="btn btn-primary" id="pauseBtn" onclick="togglePause()" disabled style="display: none;">⏸️ Pause</button>
+                <button class="btn btn-danger" id="stopBtn" onclick="stopSession()" disabled>⏹️ Arrêter</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="loadNextRandom()" disabled>⏭️ Volgende</button>
+            </div>
+
+            <div class="stats" id="stats" style="display: none;">
+                <div class="stat-item">
+                    <div class="stat-value" id="docsPlayed">0</div>
+                    <div class="stat-label">Documenten lus</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="wordsLearned">0</div>
+                    <div class="stat-label">Mots appris</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="player-card" id="playerCard" style="display: none;">
+            <div class="resource-info">
+                <div class="resource-title" id="resourceTitle"></div>
+                <div class="meta" id="resourceMeta"></div>
+            </div>
+
+            <audio id="audio-player" class="audio-player" controls controlsList="nodownload" preload="auto" playsinline>
+                Votre navigateur ne supporte pas l'élément audio.
+            </audio>
+
+            <div class="content-section">
+                <h2 class="section-title">📝 Texte</h2>
+                <div class="text-content" id="textContent"></div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">📚 Vocabulaire</h2>
+                <ul class="vocab-list" id="vocabList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const LANGUAGE_CONFIG = {
+            'eng': { name: 'Anglais', flag: '🇬🇧' },
+            'all': { name: 'Allemand', flag: '🇩🇪' },
+            'esp': { name: 'Espagnol', flag: '🇪🇸' },
+            'nl': { name: 'Néerlandais', flag: '🇳🇱' },
+            'fr': { name: 'Français', flag: '🇫🇷' },
+            'it': { name: 'Italien', flag: '🇮🇹' },
+            'cor': { name: 'Coréen', flag: '🇰🇷' }
+        };
+
+        let allResources = [];
+        let currentLanguage = null;
+        let languageResources = [];
+        let filteredResources = [];
+        let availableResources = [];
+        let playedResources = [];
+        let currentResource = null;
+        let sessionActive = false;
+        let sessionPaused = false;
+        let sessionTimer = null;
+        let sessionEndTime = null;
+        let docsPlayedCount = 0;
+        let totalWordsLearned = 0;
+        let sessionPlaylist = [];  // Playlist pré-calculée
+        let currentPlaylistIndex = 0;
+        let isPlayingSilence = false; // Indique si on joue la pause silencieuse
+        let silenceUrl = null;        // URL Blob pour 3s de silence
+
+        // Charger les métadonnées au démarrage
+        fetch('metadata.json')
+            .then(response => response.json())
+            .then(data => {
+                allResources = data.resources;
+                console.log(`📚 ${allResources.length} ressources chargées`);
+                initLanguageSelection();
+            })
+            .catch(error => {
+                console.error('Erreur chargement métadonnées:', error);
+                alert('Impossible de charger les ressources. Veuillez recharger la page.');
+            });
+
+        function initLanguageSelection() {
+            // Récupérer la langue depuis l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            const niveauParam = urlParams.get('niveau');
+            
+            if (langParam && LANGUAGE_CONFIG[langParam]) {
+                currentLanguage = langParam;
+                languageResources = allResources.filter(r => r.langue === currentLanguage);
+                
+                // Restaurer le niveau depuis l'URL (prioritaire) ou localStorage
+                const savedNiveau = niveauParam || localStorage.getItem('selectedNiveau');
+                if (savedNiveau) {
+                    const filterSelect = document.getElementById('filterNiveau');
+                    filterSelect.value = savedNiveau;
+                    // Propager dans localStorage pour les autres pages
+                    localStorage.setItem('selectedNiveau', savedNiveau);
+                }
+                
+                updateFilteredResources();
+            } else {
+                // Tonen un sélecteur de langue
+                showLanguageSelector();
+            }
+        }
+
+        function showLanguageSelector() {
+            const sessionInfo = document.getElementById('sessionInfo');
+            
+            let html = '<div style="margin-bottom: 10px; font-weight: 600;">Choisissez une langue:</div>';
+            html += '<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">';
+            
+            // Compter les ressources par langue
+            const langCounts = {};
+            allResources.forEach(r => {
+                langCounts[r.langue] = (langCounts[r.langue] || 0) + 1;
+            });
+            
+            Object.entries(LANGUAGE_CONFIG).forEach(([code, config]) => {
+                const count = langCounts[code] || 0;
+                if (count > 0) {
+                    html += `
+                        <button onclick="selectLanguage('${code}')" 
+                                class="btn btn-primary" 
+                                style="min-width: 120px;">
+                            ${config.flag} ${config.name} (${count})
+                        </button>
+                    `;
+                }
+            });
+            
+            html += '</div>';
+            sessionInfo.innerHTML = html;
+        }
+
+        function selectLanguage(langCode) {
+            currentLanguage = langCode;
+            languageResources = allResources.filter(r => r.langue === currentLanguage);
+            
+            // Mettre à jour l'URL
+            const url = new URL(window.location);
+            url.searchParams.set('lang', langCode);
+            const currentNiveau = document.getElementById('filterNiveau').value || localStorage.getItem('selectedNiveau');
+            if (currentNiveau) {
+                url.searchParams.set('niveau', currentNiveau);
+            } else {
+                url.searchParams.delete('niveau');
+            }
+            window.history.pushState({}, '', url);
+            
+            // Restaurer le niveau depuis localStorage avant de filtrer
+            const savedNiveau = localStorage.getItem('selectedNiveau');
+            if (savedNiveau) {
+                document.getElementById('filterNiveau').value = savedNiveau;
+            }
+            
+            // Initialiser les ressources filtrées
+            updateFilteredResources();
+            updateSessionInfo();
+        }
+
+        function updateFilteredResources() {
+            if (!currentLanguage) return;
+            
+            const niveauFilter = document.getElementById('filterNiveau').value;
+            
+            // Sauvegarder le niveau dans localStorage
+            if (niveauFilter) {
+                localStorage.setItem('selectedNiveau', niveauFilter);
+                filteredResources = languageResources.filter(r => r.niveau === niveauFilter);
+            } else {
+                localStorage.removeItem('selectedNiveau');
+                filteredResources = [...languageResources];
+            }
+            
+            updateSessionInfo();
+        }
+
+        function updateSessionInfo() {
+            const config = LANGUAGE_CONFIG[currentLanguage];
+            const sessionInfo = document.getElementById('sessionInfo');
+            const niveauFilter = document.getElementById('filterNiveau').value;
+            const niveauText = niveauFilter ? ` (${niveauFilter})` : '';
+            
+            sessionInfo.innerHTML = `
+                <strong>${config.flag} ${config.name}${niveauText}</strong> — 
+                ${filteredResources.length} ressources disponibles
+            `;
+            document.getElementById('startBtn').disabled = filteredResources.length === 0;
+        }
+
+        async function startSession() {
+            if (!currentLanguage || filteredResources.length === 0) {
+                alert('Veuillez sélectionner une langue avec des ressources disponibles.');
+                return;
+            }
+
+            const durationMinutes = parseInt(document.getElementById('durationMinutes').value);
+            if (durationMinutes < 1 || durationMinutes > 120) {
+                alert('Durée invalide. Choisissez entre 1 et 120 minutes.');
+                return;
+            }
+
+            // Pré-calculer la playlist pour la durée demandée
+            sessionPlaylist = buildPlaylist(durationMinutes);
+            
+            if (sessionPlaylist.length === 0) {
+                alert('Impossible de créer une playlist avec les ressources disponibles.');
+                return;
+            }
+
+            // Calculer la durée totale réelle
+            const totalDuration = sessionPlaylist.reduce((sum, r) => sum + (r.duration || 60), 0);
+            const totalMinutes = Math.ceil(totalDuration / 60);
+            
+            console.log(`📋 Playlist créée: ${sessionPlaylist.length} documents, durée estimée: ${totalMinutes} min`);
+
+            // Initialiser la session
+            sessionActive = true;
+            sessionEndTime = Date.now() + (totalMinutes * 60 * 1000);  // Durée réelle
+            currentPlaylistIndex = 0;
+            docsPlayedCount = 0;
+            totalWordsLearned = 0;
+
+            // Mettre à jour l'interface
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('pauseBtn').disabled = false;
+            document.getElementById('pauseBtn').style.display = 'inline-block';
+            document.getElementById('pauseBtn').textContent = '⏸️ Pause';
+            document.getElementById('stopBtn').disabled = false;
+            document.getElementById('nextBtn').disabled = false;
+            document.getElementById('durationMinutes').disabled = true;
+            document.getElementById('filterNiveau').disabled = true;
+            document.getElementById('stats').style.display = 'flex';
+            document.getElementById('playerCard').style.display = 'block';
+            document.getElementById('timerDisplay').classList.add('active');
+            sessionPaused = false;
+
+            // Démarrer le timer d'affichage
+            updateTimer();
+            sessionTimer = setInterval(updateTimer, 1000);
+
+            // Configurer Media Session API pour la lecture en arrière-plan
+            setupMediaSession();
+
+            // Préparer l'URL de silence 3s (une fois)
+            if (!silenceUrl) {
+                silenceUrl = URL.createObjectURL(createSilentWav(3));
+            }
+
+            // Charger et jouer le premier document de la playlist
+            loadPlaylistItem(0);
+
+            // Luisteren la fin de l'audio pour passer au suivant
+            const audio = document.getElementById('audio-player');
+            audio.addEventListener('ended', onAudioEnded);
+        }
+
+        async function stopSession() {
+            sessionActive = false;
+            sessionPaused = false;
+            clearInterval(sessionTimer);
+            
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').style.display = 'none';
+            document.getElementById('stopBtn').disabled = true;
+            document.getElementById('nextBtn').disabled = true;
+            document.getElementById('durationMinutes').disabled = false;
+            document.getElementById('filterNiveau').disabled = false;
+            document.getElementById('timerDisplay').classList.remove('active');
+            
+            const audio = document.getElementById('audio-player');
+            audio.pause();
+            audio.removeEventListener('ended', onAudioEnded);
+
+            // Nettoyer Media Session
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = null;
+            }
+
+            alert(`Session terminée!\n\n📚 Documenten lus: ${docsPlayedCount}\n📖 Mots appris: ${totalWordsLearned}`);
+        }
+
+        function togglePause() {
+            const audio = document.getElementById('audio-player');
+            const pauseBtn = document.getElementById('pauseBtn');
+            
+            if (sessionPaused) {
+                // Reprendre la lecture
+                sessionPaused = false;
+                audio.play().catch(e => console.log('Erreur reprise:', e));
+                pauseBtn.textContent = '⏸️ Pause';
+                pauseBtn.classList.remove('btn-danger');
+                pauseBtn.classList.add('btn-primary');
+                
+                if ('mediaSession' in navigator) {
+                    navigator.mediaSession.playbackState = 'playing';
+                }
+            } else {
+                // Mettre en pause
+                sessionPaused = true;
+                audio.pause();
+                pauseBtn.textContent = '▶️ Reprendre';
+                pauseBtn.classList.remove('btn-primary');
+                pauseBtn.classList.add('btn-danger');
+                
+                if ('mediaSession' in navigator) {
+                    navigator.mediaSession.playbackState = 'paused';
+                }
+            }
+        }
+
+        function updateTimer() {
+            if (!sessionActive) return;
+
+            const remaining = sessionEndTime - Date.now();
+            
+            if (remaining <= 0) {
+                // Session terminée
+                stopSession();
+                return;
+            }
+
+            const minutes = Math.floor(remaining / 60000);
+            const seconds = Math.floor((remaining % 60000) / 1000);
+            
+            const timerDisplay = document.getElementById('timerDisplay');
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Changer la couleur selon le temps restant
+            timerDisplay.classList.remove('warning', 'danger');
+            if (remaining < 60000) { // Moins d'1 minute
+                timerDisplay.classList.add('danger');
+            } else if (remaining < 300000) { // Moins de 5 minutes
+                timerDisplay.classList.add('warning');
+            }
+        }
+
+        function buildPlaylist(durationMinutes) {
+            // Estimer combien de documents peuvent tenir dans la durée
+            const targetDuration = durationMinutes * 60; // en secondes
+            const avgDocDuration = 60; // estimation moyenne d'un document en secondes
+            const estimatedDocs = Math.ceil(targetDuration / avgDocDuration);
+            
+            // Créer un pool mélangé
+            const shuffled = [...filteredResources].sort(() => Math.random() - 0.5);
+            
+            // Sélectionner des documents jusqu'à atteindre approximativement la durée
+            const playlist = [];
+            let currentDuration = 0;
+            let poolIndex = 0;
+            
+            while (currentDuration < targetDuration && poolIndex < shuffled.length) {
+                const doc = shuffled[poolIndex];
+                const docDuration = doc.duration || avgDocDuration;
+                
+                playlist.push(doc);
+                currentDuration += docDuration;
+                poolIndex++;
+                
+                // Si on a épuisé le pool mais pas atteint la durée, recommencer
+                if (poolIndex >= shuffled.length && currentDuration < targetDuration) {
+                    poolIndex = 0;
+                }
+            }
+            
+            console.log(`📋 Playlist: ${playlist.length} docs, durée estimée: ${Math.ceil(currentDuration/60)} min (demandé: ${durationMinutes} min)`);
+            return playlist;
+        }
+
+        function loadPlaylistItem(index) {
+            if (index >= sessionPlaylist.length) {
+                // Fin de la playlist
+                console.log('✅ Playlist terminée');
+                stopSession();
+                return;
+            }
+
+            // Réinitialiser l'état de pause lors du chargement d'un nouveau document
+            sessionPaused = false;
+            const pauseBtn = document.getElementById('pauseBtn');
+            if (pauseBtn) {
+                pauseBtn.textContent = '⏸️ Pause';
+                pauseBtn.classList.remove('btn-danger');
+                pauseBtn.classList.add('btn-primary');
+            }
+
+            currentPlaylistIndex = index;
+            currentResource = sessionPlaylist[index];
+            
+            console.log(`📄 [${index + 1}/${sessionPlaylist.length}] ${currentResource.prompt} (${currentResource.niveau})`);
+
+            // Charger le contenu
+            displayResource();
+            
+            // Mettre à jour les stats
+            docsPlayedCount = index + 1;
+            totalWordsLearned = sessionPlaylist.slice(0, index + 1)
+                .reduce((sum, r) => sum + (r.vocab_count || 0), 0);
+            document.getElementById('docsPlayed').textContent = docsPlayedCount;
+            document.getElementById('wordsLearned').textContent = totalWordsLearned;
+            
+            // Mettre à jour Media Session
+            updateMediaSessionMetadata();
+        }
+
+        function loadNextRandom() {
+            // Fonction maintenue pour le bouton "Volgende" manuel
+            if (!sessionActive) return;
+            
+            // Réinitialiser l'état de pause
+            if (sessionPaused) {
+                sessionPaused = false;
+                const pauseBtn = document.getElementById('pauseBtn');
+                pauseBtn.textContent = '⏸️ Pause';
+                pauseBtn.classList.remove('btn-danger');
+                pauseBtn.classList.add('btn-primary');
+            }
+            
+            loadPlaylistItem(currentPlaylistIndex + 1);
+        }
+
+        function onAudioEnded() {
+            if (!sessionActive) return;
+
+            const audio = document.getElementById('audio-player');
+            if (!isPlayingSilence) {
+                // Fin d'un document: jouer 3s de silence sans recourir aux timers
+                console.log('🎵 Document terminé, lecture du silence (3s)...');
+                isPlayingSilence = true;
+                playSilence(audio);
+            } else {
+                // Fin du silence: passer au document suivant
+                console.log('⏭️ Fin du silence, passage au document suivant');
+                isPlayingSilence = false;
+                loadPlaylistItem(currentPlaylistIndex + 1);
+            }
+        }
+
+        function setupMediaSession() {
+            if (!('mediaSession' in navigator)) {
+                console.log('⚠️ Media Session API non disponible');
+                return;
+            }
+
+            // Configurer les handlers pour les contrôles média (écran verrouillé, notifications)
+            navigator.mediaSession.setActionHandler('play', () => {
+                const audio = document.getElementById('audio-player');
+                audio.play();
+            });
+
+            navigator.mediaSession.setActionHandler('pause', () => {
+                const audio = document.getElementById('audio-player');
+                audio.pause();
+            });
+
+            navigator.mediaSession.setActionHandler('nexttrack', () => {
+                loadNextRandom();
+            });
+
+            navigator.mediaSession.setActionHandler('previoustrack', () => {
+                if (currentPlaylistIndex > 0) {
+                    loadPlaylistItem(currentPlaylistIndex - 1);
+                }
+            });
+
+            console.log('✅ Media Session configurée');
+        }
+
+        function updateMediaSessionMetadata() {
+            if (!('mediaSession' in navigator) || !currentResource) return;
+
+            const config = LANGUAGE_CONFIG[currentResource.langue];
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: currentResource.resume || currentResource.prompt,
+                artist: `${config.name} - ${currentResource.niveau}`,
+                album: `Lecteur Aléatoire (${currentPlaylistIndex + 1}/${sessionPlaylist.length})`
+            });
+        }
+
+        // Lecture de 3s de silence via WAV Blob (évite setTimeout qui est bridé en veille iOS)
+        function playSilence(audio) {
+            if (!silenceUrl) {
+                silenceUrl = URL.createObjectURL(createSilentWav(3));
+            }
+            audio.src = silenceUrl;
+            audio.load();
+            audio.play().catch(e => console.log('Lecture du silence échouée:', e));
+
+            // Metadonnées indicatives
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: 'Pause (3s)',
+                    artist: 'Lecteur Aléatoire',
+                    album: 'Pause silencieuse'
+                });
+            }
+        }
+
+        // Génère un WAV silencieux (PCM 16-bit, mono)
+        function createSilentWav(seconds, sampleRate = 44100) {
+            const numSamples = Math.max(1, Math.floor(seconds * sampleRate));
+            const byteRate = sampleRate * 2; // mono 16-bit
+            const blockAlign = 2;
+            const dataSize = numSamples * 2;
+            const buffer = new ArrayBuffer(44 + dataSize);
+            const view = new DataView(buffer);
+
+            // RIFF header
+            writeString(view, 0, 'RIFF');
+            view.setUint32(4, 36 + dataSize, true);
+            writeString(view, 8, 'WAVE');
+
+            // fmt chunk
+            writeString(view, 12, 'fmt ');
+            view.setUint32(16, 16, true);       // PCM chunk size
+            view.setUint16(20, 1, true);        // audio format = PCM
+            view.setUint16(22, 1, true);        // channels = 1
+            view.setUint32(24, sampleRate, true);// sample rate
+            view.setUint32(28, byteRate, true);  // byte rate
+            view.setUint16(32, blockAlign, true);// block align
+            view.setUint16(34, 16, true);        // bits per sample
+
+            // data chunk
+            writeString(view, 36, 'data');
+            view.setUint32(40, dataSize, true);
+            // Samples (silence = 0)
+            for (let i = 0; i < numSamples; i++) {
+                view.setInt16(44 + i * 2, 0, true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        function displayResource() {
+            const config = LANGUAGE_CONFIG[currentResource.langue];
+            
+            // Titre
+            document.getElementById('resourceTitle').textContent = currentResource.resume || currentResource.prompt;
+            
+            // Déterminer l'affichage de la voix
+            let voiceDisplay = '';
+            let voiceEmoji = '🎤';
+            
+            if (currentResource.genre && currentResource.genre.charAt(0) === currentResource.genre.charAt(0).toUpperCase()) {
+                voiceDisplay = currentResource.genre;
+                voiceEmoji = '🎤';
+            } else {
+                voiceDisplay = currentResource.genre ? currentResource.genre.charAt(0).toUpperCase() + currentResource.genre.slice(1) : '';
+                voiceEmoji = currentResource.genre === 'femme' ? '👩🎤' : '👨🎤';
+            }
+            
+            // Métadonnées
+            const metaHTML = `
+                <div class="meta-item">
+                    <span>${config.flag}</span>
+                    <span>${config.name}</span>
+                </div>
+                <div class="meta-item">
+                    <span>${voiceEmoji}</span>
+                    <span>${voiceDisplay}</span>
+                </div>
+                <div class="meta-item niveau-badge">${currentResource.niveau}</div>
+                <div class="meta-item">
+                    <span>📝</span>
+                    <span>${currentResource.longueur} woorden</span>
+                </div>
+                <div class="meta-item">
+                    <span>📚</span>
+                    <span>${currentResource.vocab_count} woorden vocab.</span>
+                </div>
+            `;
+            document.getElementById('resourceMeta').innerHTML = metaHTML;
+            
+            // Audio
+            const audio = document.getElementById('audio-player');
+            audio.src = currentResource.audio_path;
+            audio.load();
+            audio.play().catch(e => console.log('Lecture auto bloquée:', e));
+
+            // Charger le texte complet
+            fetch(currentResource.text_path)
+                .then(response => response.text())
+                .then(content => {
+                    parseAndDisplayContent(content);
+                })
+                .catch(error => {
+                    console.error('Erreur chargement contenu:', error);
+                    document.getElementById('textContent').textContent = currentResource.text_preview;
+                });
+        }
+
+        function highlightVocabInText(text, vocabList) {
+            let highlightedText = text;
+
+            const normalizeWord = (w) => {
+                let word = (w || '').toString();
+                word = word.replace(/^(le|la|les|l'|der|die|das|el|los|las|un|una|uno|unos|unas|de|het|il|lo|gli|le|i|un'|l')\s+/i, '');
+                word = word.replace(/^to\s+/i, '');
+                word = word.replace(/\*/g, '');
+                if (word.includes('→')) word = word.split('→')[0].trim();
+                return word.trim();
+            };
+
+            const transByWord = new Map();
+            vocabList.forEach(item => {
+                const key = normalizeWord(item.word).toLowerCase();
+                const translation = (item.translation || '').toString();
+                const translationNormalized = normalizeWord(translation).toLowerCase();
+                // Ignorer les entrées où la "traduction" est identique au mot (ex: noms propres)
+                if (key.length > 2 && key !== translationNormalized && !transByWord.has(key)) {
+                    transByWord.set(key, translation);
+                }
+            });
+
+            const uniqueWords = Array.from(transByWord.keys()).sort((a, b) => b.length - a.length);
+
+            uniqueWords.forEach(word => {
+                const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp(`(^|[^\\wÀ-ÿ'])(${escapedWord})(?=$|[^\\wÀ-ÿ'])`, 'gi');
+
+                highlightedText = highlightedText.replace(regex, (_m, p1, p2) => {
+                    const k = normalizeWord(p2).toLowerCase();
+                    let tr = transByWord.get(k) || '';
+                    if (tr) tr = tr.replace(/"/g, '&quot;');
+                    const titleAttr = tr ? ` title="${tr}"` : '';
+                    const dataAttr = tr ? ` data-translation="${tr}"` : '';
+                    return `${p1}<span class="vocab-highlight"${titleAttr}${dataAttr}>${p2}</span>`;
+                });
+            });
+
+            return highlightedText;
+        }
+
+        function parseAndDisplayContent(content) {
+            // Extraire le texte et le vocabulaire
+            const textMatch = content.match(/## (?:Text|Texte|Texto|Tekst|텍스트|Testo)\s*\n\n(.*?)(?=\n## |$)/s);
+            const vocabMatch = content.match(/## (?:Vocabulary|Vocabulaire|Vocabulario|Wortschatz|Woordenschat|어휘|Vocabolario)\s*\n\n(.*?)$/s);
+            
+            // Parser le vocabulaire d'abord pour la mise en évidence
+            const vocabWords = [];
+            if (vocabMatch) {
+                const vocabLines = vocabMatch[1].trim().split('\n');
+                vocabLines.forEach(line => {
+                    const cleanLine = line.replace(/^[-*]\s*/, '').trim();
+                    if (cleanLine) {
+                        let word = '', translation = '';
+                        
+                        if (cleanLine.includes('→')) {
+                            const parts = cleanLine.split('→');
+                            word = parts[0].replace(/\*\*/g, '').trim();
+                            translation = parts[1].trim();
+                        } else if (cleanLine.includes('|')) {
+                            const parts = cleanLine.split('|');
+                            word = parts[0].replace(/\*\*/g, '').trim();
+                            translation = parts[1].trim();
+                        } else {
+                            word = cleanLine;
+                        }
+                        
+                        if (word) {
+                            vocabWords.push({ word, translation });
+                        }
+                    }
+                });
+            }
+            
+            // Tonen le texte avec mise en évidence
+            if (textMatch) {
+                const textContent = textMatch[1].trim();
+                if (vocabWords.length > 0) {
+                    document.getElementById('textContent').innerHTML = highlightVocabInText(textContent, vocabWords);
+                } else {
+                    document.getElementById('textContent').textContent = textContent;
+                }
+            } else {
+                document.getElementById('textContent').textContent = currentResource.text_preview;
+            }
+            
+            // Tonen le vocabulaire
+            const vocabList = document.getElementById('vocabList');
+            vocabList.innerHTML = '';
+            
+            if (vocabMatch) {
+                const vocabLines = vocabMatch[1].trim().split('\n');
+                vocabLines.forEach(line => {
+                    const cleanLine = line.replace(/^[-*]\s*/, '').trim();
+                    if (cleanLine) {
+                        // Parser les différents formats
+                        let word = '', translation = '';
+                        
+                        if (cleanLine.includes('→')) {
+                            // Format: **mot** → traduction OU mot → romanisation (traduction)
+                            const parts = cleanLine.split('→');
+                            word = parts[0].replace(/\*\*/g, '').trim();
+                            translation = parts[1].trim();
+                        } else if (cleanLine.includes('|')) {
+                            // Format: **mot** | traduction
+                            const parts = cleanLine.split('|');
+                            word = parts[0].replace(/\*\*/g, '').trim();
+                            translation = parts[1].trim();
+                        } else {
+                            word = cleanLine;
+                        }
+                        
+                        if (word) {
+                            const li = document.createElement('li');
+                            li.className = 'vocab-item';
+                            li.innerHTML = `
+                                <span class="vocab-word">${word}</span>
+                                ${translation ? `<span class="vocab-translation">${translation}</span>` : ''}
+                            `;
+                            vocabList.appendChild(li);
+                        }
+                    }
+                });
+            }
+        }
+
+        // Tooltips tactiles: tap sur un mot pour afficher/masquer la traduction (iOS/Android)
+        (function setupTouchTooltips(){
+            let activeTooltip = null;
+            let activeTarget = null;
+            let tooltipTimer = null;
+            function hideTooltip(){
+                if (tooltipTimer){ clearTimeout(tooltipTimer); tooltipTimer = null; }
+                if (activeTooltip && activeTooltip.parentNode){
+                    activeTooltip.parentNode.removeChild(activeTooltip);
+                    activeTooltip = null;
+                }
+                activeTarget = null;
+            }
+            function showTooltip(target, text){
+                hideTooltip();
+                const rect = target.getBoundingClientRect();
+                const tip = document.createElement('div');
+                tip.className = 'tooltip-bubble';
+                tip.textContent = text;
+                document.body.appendChild(tip);
+                // Positionner au-dessus si possible, sinon en dessous
+                const desiredTop = window.scrollY + rect.top - tip.offsetHeight - 8;
+                const belowTop = window.scrollY + rect.top + rect.height + 8;
+                const left = window.scrollX + rect.left + rect.width/2;
+                const finalTop = desiredTop > window.scrollY ? desiredTop : belowTop;
+                tip.style.top = `${finalTop}px`;
+                tip.style.left = `${left}px`;
+                activeTooltip = tip;
+                activeTarget = target;
+                tooltipTimer = setTimeout(hideTooltip, 5000);
+            }
+            const handler = (e)=>{
+                const span = e.target.closest('.vocab-highlight');
+                if (span && (span.getAttribute('data-translation') || span.getAttribute('title'))){
+                    const text = span.getAttribute('data-translation') || span.getAttribute('title') || '';
+                    if (activeTarget === span){ hideTooltip(); }
+                    else if (text){ showTooltip(span, text); }
+                    e.preventDefault(); e.stopPropagation();
+                }
+            };
+            document.addEventListener('click', handler, { passive: true });
+            document.addEventListener('touchstart', handler, { passive: true });
+            window.addEventListener('scroll', hideTooltip, { passive: true });
+            window.addEventListener('resize', hideTooltip, { passive: true });
+        })();
+    </script>
+</body>
+</html>
