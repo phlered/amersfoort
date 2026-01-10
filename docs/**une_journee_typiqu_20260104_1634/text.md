@@ -1,6 +1,6 @@
 ---
 langue: Français
-prompt: **Une journée typique**
+prompt: Une journée typique
 resume: Une journée typique
 longueur: 150
 niveau: A1

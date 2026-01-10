@@ -1,6 +1,6 @@
 ---
 langue: Français
-prompt: **Mes loisirs**
+prompt: Mes loisirs
 resume: Mes loisirs
 longueur: 150
 niveau: A1

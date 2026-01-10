@@ -86,6 +86,19 @@ def extract_front_matter(path: Path) -> Dict[str, Any]:
     return data
 
 
+def _convert_dates_recursive(obj):
+    """Convert datetime and date objects to ISO strings recursively."""
+    if isinstance(obj, datetime):
+        return obj.isoformat(sep=" ", timespec="seconds")
+    elif isinstance(obj, date):
+        return obj.isoformat()
+    elif isinstance(obj, dict):
+        return {k: _convert_dates_recursive(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [_convert_dates_recursive(v) for v in obj]
+    return obj
+
+
 def build_record(text_path: Path) -> Dict[str, Any]:
     meta = extract_front_matter(text_path)
     record = {
@@ -100,6 +113,9 @@ def build_record(text_path: Path) -> Dict[str, Any]:
 def main() -> None:
     text_files = sorted(DOCS_DIR.glob("*/text.md"))
     records = [build_record(path) for path in text_files]
+    
+    # Ensure all datetime objects are converted before JSON serialization
+    records = _convert_dates_recursive(records)
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(

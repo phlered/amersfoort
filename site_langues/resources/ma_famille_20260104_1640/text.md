@@ -1,6 +1,6 @@
 ---
 langue: Français
-prompt: **Ma famille**
+prompt: Ma famille
 resume: Ma famille
 longueur: 150
 niveau: A1

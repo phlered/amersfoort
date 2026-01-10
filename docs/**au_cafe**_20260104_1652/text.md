@@ -1,6 +1,6 @@
 ---
 langue: Français
-prompt: **Au café**
+prompt: Au café
 resume: Le café
 longueur: 150
 niveau: A1

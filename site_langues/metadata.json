@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T15:56:12.933038",
+  "generated_at": "2026-01-10T16:02:29.295443",
   "total_resources": 29,
   "languages": [
     "fr"
@@ -128,7 +128,7 @@
     {
       "id": "mon_logement_20260104_1641",
       "langue": "fr",
-      "prompt": "**Mon logement**",
+      "prompt": "Mon logement",
       "resume": "Mon logement",
       "niveau": "A1",
       "classe": "",
@@ -168,7 +168,7 @@
     {
       "id": "ma_famille_20260104_1640",
       "langue": "fr",
-      "prompt": "**Ma famille**",
+      "prompt": "Ma famille",
       "resume": "Ma famille",
       "niveau": "A1",
       "classe": "",
@@ -228,7 +228,7 @@
     {
       "id": "une_journee_typiqu_20260104_1634",
       "langue": "fr",
-      "prompt": "**Une journée typique**",
+      "prompt": "Une journée typique",
       "resume": "Une journée typique",
       "niveau": "A1",
       "classe": "",
@@ -528,7 +528,7 @@
     {
       "id": "au_cafe_20260104_1652",
       "langue": "fr",
-      "prompt": "**Au café**",
+      "prompt": "Au café",
       "resume": "Le café",
       "niveau": "A1",
       "classe": "",

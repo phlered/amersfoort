@@ -1,0 +1,46 @@
+name: Déployer sur GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Permet le déclenchement manuel
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Nécessaire pour gh-pages
+      
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Installer les dépendances
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Build le site
+        run: |
+          python3 build_site.py
+          python3 update_prompt_index.py
+          python3 generate_prompts_list.py
+      
+      - name: Créer .nojekyll
+        run: touch site_langues/.nojekyll
+      
+      - name: Déployer sur gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site_langues
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

@@ -1,6 +1,6 @@
 ---
 langue: Français
-prompt: **Faire les courses**
+prompt: Faire les courses
 resume: Faire les courses
 longueur: 150
 niveau: A1

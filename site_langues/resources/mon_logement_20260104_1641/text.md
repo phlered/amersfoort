@@ -1,6 +1,6 @@
 ---
 langue: Français
-prompt: **Mon logement**
+prompt: Mon logement
 resume: Mon logement
 longueur: 150
 niveau: A1
