@@ -1,10 +1,30 @@
 {
-  "generated_at": "2026-01-09T20:51:24.002619",
-  "total_resources": 23,
+  "generated_at": "2026-01-10T14:52:36.802827",
+  "total_resources": 25,
   "languages": [
     "fr"
   ],
   "resources": [
+    {
+      "id": "tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451",
+      "langue": "fr",
+      "prompt": "Tu t'appelles Niels et tu habites Amersfoort. Tu écris un mail à ton correspondant Français Jules pour lui décrire ta ville",
+      "resume": "Amersfoort en Hollande",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 14:51:21",
+      "longueur": 200,
+      "text_preview": "Objet : Découvre ma ville, Amersfoort\n\nSalut Jules,\n\nJ'espère que tu vas bien. Je suis content d'échanger avec toi et aujourd'hui, je vais te parler de ma ville, Amersfoort.\n\nAmersfoort est une ville ...",
+      "vocab_count": 34,
+      "audio_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/audio.mp3",
+      "text_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/text.md",
+      "titre_nl": "Beschrijven",
+      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+    },
     {
       "id": "es_tu_deja_alle_en_f_20260101_1944",
       "langue": "fr",
@@ -304,6 +324,26 @@
       "text_path": "resources/le_repas_de_noel_en_20260101_1655/text.md",
       "titre_nl": "Het Kerstdiner",
       "mots_cles_nl": "Kerstmis, feest, diner, familie, eten"
+    },
+    {
+      "id": "jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452",
+      "langue": "fr",
+      "prompt": "Jules qui habite Toucy en France écrit à Niels pour lui décrire sa ville et le lycée Pierre Larousse",
+      "resume": "Toucy et le lycée Pierre Larousse",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 14:52:16",
+      "longueur": 200,
+      "text_preview": "Salut Niels,\n\nComment ça va ? Moi, ça va bien. Je veux te parler de ma ville, Toucy, en France. Toucy est une petite ville, mais elle est jolie. Il y a environ 2 800 habitants ici. C’est calme et les ...",
+      "vocab_count": 35,
+      "audio_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/audio.mp3",
+      "text_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/text.md",
+      "titre_nl": "Beschrijven",
+      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
     },
     {
       "id": "tu_es_francais_ecri_20260104_1519",
