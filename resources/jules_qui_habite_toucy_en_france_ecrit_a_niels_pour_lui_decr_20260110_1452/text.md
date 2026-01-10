@@ -8,7 +8,7 @@ genre: femme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 14:52:16
-titre_nl: Beschrijven
+titre_nl: Jules beschrijft Toucy en het lycee Pierre Larousse
 mots_cles_nl: Toucy, Frankrijk, stad, lycee, markt
 ---
 

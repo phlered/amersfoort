@@ -8,7 +8,7 @@ genre: homme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 15:18:25
-titre_nl: Décris les chanteurs populaires chez les adolescents en France.
+titre_nl: Populaire zangers bij Franse tieners
 mots_cles_nl: Franse muziek, tieners, pop, rap, artiesten
 ---
 
