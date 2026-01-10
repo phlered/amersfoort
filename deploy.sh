@@ -23,11 +23,16 @@ fi
 
 # 3. Pousser site_langues vers gh-pages
 echo "📤 3/4 - Déploiement sur gh-pages..."
+TEMP_DIR=$(mktemp -d)
+cp -r site_langues/* "$TEMP_DIR/"
+
 git checkout gh-pages
 git pull origin gh-pages --rebase || true
 
-# Copier le contenu de site_langues à la racine de gh-pages
-rsync -av --delete site_langues/ . --exclude='.git'
+# Copier le contenu du dossier temporaire à la racine de gh-pages
+# en préservant les fichiers existants non présents dans site_langues
+cp -r "$TEMP_DIR"/* .
+rm -rf "$TEMP_DIR"
 
 git add .
 if git diff --staged --quiet; then
