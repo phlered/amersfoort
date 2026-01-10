@@ -9,7 +9,7 @@ drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 14:52:16
 titre_nl: Beschrijven
-mots_cles_nl: Frans, leren, woordenschat, oefening
+mots_cles_nl: Toucy, Frankrijk, stad, lycee, markt
 ---
 
 ## Texte

@@ -9,7 +9,7 @@ drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 15:19:20
 titre_nl: Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients
-mots_cles_nl: Frans, leren, woordenschat, oefening
+mots_cles_nl: Franse keuken, ratatouille, croque-monsieur, ingredienten
 ---
 
 ## Texte

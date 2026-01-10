@@ -7,7 +7,7 @@ niveau: A1
 genre: femme
 date_generation: 2025-12-16 08:38:02
 titre_nl: Mijn dagelijkse routine
-mots_cles_nl: Frans, leren, woordenschat, oefening
+mots_cles_nl: dagelijkse routine, student, universiteit, maaltijden, vrije tijd
 ---
 
 ## Texte

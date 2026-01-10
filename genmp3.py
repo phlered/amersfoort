@@ -788,29 +788,49 @@ def translate_to_dutch(french_text, target_lang):
     return french_text  # Retourner l'original si pas de traduction
 
 def get_keywords_for_title(french_text):
-    """Retourne les mots-clés néerlandais pour un titre"""
-    text_lower = french_text.lower()
-    keywords = {
-        "pharmacie": "apotheek, medicijnen, recept, ziekte",
-        "médecin": "dokter, arts, ziek, afspraak",
-        "train": "trein, station, ticket, reis",
-        "café": "café, koffie, drinken, bestelling",
-        "fruit": "fruit, groenten, markt, kopen",
-        "courses": "boodschappen, winkel, kopen, markt",
-        "famille": "familie, ouders, broer, zus, kinderen",
-        "maison": "huis, woning, kamer, interieur, slaapkamer",
-        "travail": "werk, studie, beroep, kantoor, school",
-        "loisirs": "vrijetijdsactiviteiten, hobby, sport",
-        "météo": "weer, zonnig, regen, wind, temperatuur",
-        "repas": "eten, restaurant, menu, bestelling, koken",
-        "journée": "dag, routine, ochtend, avond, dagelijks",
-        "voyage": "reis, vakantie, toerisme",
-        "climat": "klimaat, milieu, opwarming, aarde",
-    }
-    for keyword, kw_nl in keywords.items():
-        if keyword in text_lower:
-            return kw_nl
-    return "Frans, leren, woordenschat, oefening"
+    """Génère les mots-clés néerlandais pour un titre via OpenAI.
+    
+    Utilise l'API OpenAI pour créer des mots-clés pertinents en néerlandais.
+    Fallback sur une chaîne vide si l'API échoue.
+    """
+    try:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            print("⚠️  OPENAI_API_KEY manquante, pas de mots-clés néerlandais")
+            return ""
+        
+        client = OpenAI(api_key=api_key)
+        
+        keywords_prompt = f"""Génère 4-5 mots-clés en NÉERLANDAIS simples et pertinents pour ce prompt pédagogique.
+
+Retourne UNIQUEMENT les mots-clés séparés par des virgules, sans explication ni guillemets.
+Les mots-clés doivent représenter les thèmes principaux et être utiles pour un apprenant.
+
+Exemples:
+- "Les plats préférés et ingrédients" → Franse keuken, ratatouille, croque-monsieur, ingredienten
+- "La vie quotidienne" → dagelijkse routine, student, universiteit, maaltijden
+- "Paris et ses stations de métro" → Parijs, metro, overstappen, stations
+- "Ma ville, Amersfoort" → Amersfoort, Nederland, stad, historisch, kanalen
+
+Prompt à transformer: {french_text}
+
+Mots-clés (néerlandais uniquement):"""
+
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",  # Modèle léger pour cette tâche simple
+            messages=[{"role": "user", "content": keywords_prompt}],
+            max_tokens=100,
+            temperature=0.3  # Basse température pour cohérence
+        )
+        
+        keywords = response.choices[0].message.content.strip()
+        # Nettoyer les guillemets/ponctuation superflus
+        keywords = keywords.strip('"\'.,;:!? ')
+        return keywords if keywords else ""
+        
+    except Exception as e:
+        print(f"⚠️  Erreur génération mots-clés: {e}")
+        return ""
 
 def main():
     parser = argparse.ArgumentParser(

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T15:19:39.975171",
+  "generated_at": "2026-01-10T15:26:38.056255",
   "total_resources": 27,
   "languages": [
     "fr"
@@ -23,7 +23,7 @@
       "audio_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/audio.mp3",
       "text_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/text.md",
       "titre_nl": "Beschrijven",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "Amersfoort, Nederland, historische stad, kanalen, markt, park"
     },
     {
       "id": "es_tu_deja_alle_en_f_20260101_1944",
@@ -203,7 +203,7 @@
       "audio_path": "resources/se_presenter_20251216_0836/audio.mp3",
       "text_path": "resources/se_presenter_20251216_0836/text.md",
       "titre_nl": "Jezelf voorstellen",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "jezelf voorstellen, familie, hobby, universiteit, muziek"
     },
     {
       "id": "une_journee_typiqu_20260104_1634",
@@ -243,7 +243,7 @@
       "audio_path": "resources/changer_de_gare_a_pa_20260101_1655/audio.mp3",
       "text_path": "resources/changer_de_gare_a_pa_20260101_1655/text.md",
       "titre_nl": "Van station wisselen in Parijs",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "Parijs, metro, overstappen, Gare du Nord, Gare de Lyon"
     },
     {
       "id": "ma_maison_et_les_pie_20251216_0837",
@@ -343,7 +343,7 @@
       "audio_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/audio.mp3",
       "text_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/text.md",
       "titre_nl": "Beschrijven",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "Toucy, Frankrijk, stad, lycee, markt"
     },
     {
       "id": "tu_es_francais_ecri_20260104_1519",
@@ -403,7 +403,7 @@
       "audio_path": "resources/ma_routine_quotidien_20251216_0837/audio.mp3",
       "text_path": "resources/ma_routine_quotidien_20251216_0837/text.md",
       "titre_nl": "Mijn dagelijkse routine",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "dagelijkse routine, student, universiteit, maaltijden, vrije tijd"
     },
     {
       "id": "tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519",
@@ -423,7 +423,7 @@
       "audio_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/audio.mp3",
       "text_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/text.md",
       "titre_nl": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "Franse keuken, ratatouille, croque-monsieur, ingredienten"
     },
     {
       "id": "decris_ta_maison_a_l_20260104_1520",
@@ -463,7 +463,7 @@
       "audio_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/audio.mp3",
       "text_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/text.md",
       "titre_nl": "Décris les chanteurs populaires chez les adolescents en France.",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "Franse muziek, tieners, pop, rap, artiesten"
     },
     {
       "id": "quel_est_ton_sport_p_20260101_1944",

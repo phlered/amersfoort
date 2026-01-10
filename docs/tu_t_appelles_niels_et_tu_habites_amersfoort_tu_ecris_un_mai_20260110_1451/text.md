@@ -9,7 +9,7 @@ drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 14:51:21
 titre_nl: Beschrijven
-mots_cles_nl: Frans, leren, woordenschat, oefening
+mots_cles_nl: Amersfoort, Nederland, historische stad, kanalen, markt, park
 ---
 
 ## Texte
