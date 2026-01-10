@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-10T15:09:46.033122",
-  "total_resources": 25,
+  "generated_at": "2026-01-10T15:19:39.975171",
+  "total_resources": 27,
   "languages": [
     "fr"
   ],
@@ -406,6 +406,26 @@
       "mots_cles_nl": "Frans, leren, woordenschat, oefening"
     },
     {
+      "id": "tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519",
+      "langue": "fr",
+      "prompt": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
+      "resume": "Mes plats préférés en France",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:19:20",
+      "longueur": 150,
+      "text_preview": "Bonjour,\n\nJe m'appelle Manon et j'habite en France. J'aime beaucoup manger. Mes plats préférés sont la ratatouille et le croque-monsieur. La ratatouille est un plat avec beaucoup de légumes. Il y a de...",
+      "vocab_count": 35,
+      "audio_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/audio.mp3",
+      "text_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/text.md",
+      "titre_nl": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
+      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+    },
+    {
       "id": "decris_ta_maison_a_l_20260104_1520",
       "langue": "fr",
       "prompt": "Décris ta maison à la campagne",
@@ -424,6 +444,26 @@
       "text_path": "resources/decris_ta_maison_a_l_20260104_1520/text.md",
       "titre_nl": "Beschrijf je huis",
       "mots_cles_nl": "huis, woning, kamer, interieur"
+    },
+    {
+      "id": "decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518",
+      "langue": "fr",
+      "prompt": "Décris les chanteurs populaires chez les adolescents en France.",
+      "resume": "Les chanteurs populaires chez les adolescents en France",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:18:25",
+      "longueur": 150,
+      "text_preview": "Les adolescents en France aiment beaucoup la musique. Il y a plusieurs chanteurs populaires qu'ils écoutent souvent. Par exemple, Aya Nakamura est très connue. Elle chante des chansons avec des rythme...",
+      "vocab_count": 35,
+      "audio_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/audio.mp3",
+      "text_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/text.md",
+      "titre_nl": "Décris les chanteurs populaires chez les adolescents en France.",
+      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
     },
     {
       "id": "quel_est_ton_sport_p_20260101_1944",

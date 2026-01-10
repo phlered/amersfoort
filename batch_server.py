@@ -37,7 +37,8 @@ class BatchProcessor:
     
     def __init__(self, project_root: str = "."):
         self.project_root = Path(project_root)
-        self.python_exe = "python"
+        # Utiliser d'abord PYTHON_BIN si défini, sinon l'interpréteur courant
+        self.python_exe = os.environ.get("PYTHON_BIN") or sys.executable or "python3"
         
     def process_batch(self, prompt_file: str, languages: str, level: str, delay: float = 3.0, ssml: bool = False) -> Generator[str, None, None]:
         """

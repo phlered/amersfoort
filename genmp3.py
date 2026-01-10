@@ -442,7 +442,8 @@ class AudioGeneratorMD2MP3:
         # Obtenir le chemin absolu du script md2mp3.py (dans le même dossier que app.py)
         script_dir = os.path.dirname(os.path.abspath(__file__))
         md2mp3_path = os.path.join(script_dir, "md2mp3.py")
-        venv_python = "python"
+        # Utiliser l'interpréteur courant (ou PYTHON_BIN) pour lancer md2mp3
+        venv_python = os.environ.get("PYTHON_BIN") or sys.executable or "python3"
         
         # Commande md2mp3.py avec voix variée (pas de nom spécifique, juste genre)
         cmd = [

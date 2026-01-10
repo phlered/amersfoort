@@ -17,6 +17,7 @@ import random
 import subprocess
 import sys
 import time
+import os
 from pathlib import Path
 from typing import List, Tuple
 
@@ -62,7 +63,8 @@ class BatchGenerator:
         self.dry_run = dry_run
         self.delai_entre_generations = delai_entre_generations
         self.ssml = ssml
-        self.python_exe = "python"
+        # Réutiliser l'interpréteur courant ou PYTHON_BIN pour éviter les appels à un 'python' absent
+        self.python_exe = os.environ.get("PYTHON_BIN") or sys.executable or "python3"
 
     @staticmethod
     def _default_length_for_level(niveau: str) -> int:

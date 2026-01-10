@@ -5,15 +5,37 @@
 
 set -e
 
+# Choisir le binaire Python (python3 en priorité)
+PYTHON_BIN="${PYTHON_BIN:-$(command -v python3 || true)}"
+if [ -z "$PYTHON_BIN" ]; then
+    PYTHON_BIN="${PYTHON_BIN:-$(command -v python || true)}"
+fi
+
+if [ -z "$PYTHON_BIN" ]; then
+    echo "❌ Aucun interpréteur Python trouvé (python3 ou python)"
+    echo "👉 Installez Python puis relancez le script"
+    exit 1
+fi
+
+# S'assurer que pip est disponible pour cet interpréteur
+if ! "$PYTHON_BIN" -m pip --version >/dev/null 2>&1; then
+    echo "❌ pip n'est pas disponible pour $PYTHON_BIN"
+    echo "📦 Tentative d'initialisation de pip..."
+    if ! "$PYTHON_BIN" -m ensurepip --upgrade >/dev/null 2>&1; then
+        echo "❌ Impossible d'initialiser pip. Installez pip puis relancez."
+        exit 1
+    fi
+fi
+
 # Déterminer le répertoire du script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
 # Vérifier que Flask est installé
-if ! python -c "import flask" 2>/dev/null; then
+if ! "$PYTHON_BIN" -c "import flask" 2>/dev/null; then
     echo "❌ Flask n'est pas installé"
     echo "📦 Installation de Flask..."
-    pip install flask
+    "$PYTHON_BIN" -m pip install --user flask
 fi
 
 # Récupérer les arguments
@@ -59,4 +81,4 @@ else
     DEBUG_FLAG=""
 fi
 
-python batch_server.py --port "$PORT" $DEBUG_FLAG
+"$PYTHON_BIN" batch_server.py --port "$PORT" $DEBUG_FLAG
