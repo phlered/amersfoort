@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T16:02:29.295443",
+  "generated_at": "2026-01-10T16:10:59.271876",
   "total_resources": 29,
   "languages": [
     "fr"
@@ -22,7 +22,7 @@
       "vocab_count": 34,
       "audio_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/audio.mp3",
       "text_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/text.md",
-      "titre_nl": "Beschrijven",
+      "titre_nl": "Niels beschrijft Amersfoort aan Jules",
       "mots_cles_nl": "Amersfoort, Nederland, historische stad, kanalen, markt, park"
     },
     {
@@ -62,7 +62,7 @@
       "vocab_count": 35,
       "audio_path": "resources/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/audio.mp3",
       "text_path": "resources/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/text.md",
-      "titre_nl": "L'utilisation des réseaux sociaux chez les adolescents",
+      "titre_nl": "Socialemediagebruik bij tieners",
       "mots_cles_nl": "sociale media, adolescenten, communicatie, invloed, privacy"
     },
     {
@@ -342,7 +342,7 @@
       "vocab_count": 34,
       "audio_path": "resources/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/audio.mp3",
       "text_path": "resources/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/text.md",
-      "titre_nl": "Pour ou contre l'interdiction des téléphones portables au lycée",
+      "titre_nl": "Voor of tegen een telefoonverbod op de middelbare school",
       "mots_cles_nl": "telefoons, middelbare school, verbod, voor- en nadelen, leerlingen"
     },
     {
@@ -382,7 +382,7 @@
       "vocab_count": 35,
       "audio_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/audio.mp3",
       "text_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/text.md",
-      "titre_nl": "Beschrijven",
+      "titre_nl": "Jules beschrijft Toucy en het lycee Pierre Larousse",
       "mots_cles_nl": "Toucy, Frankrijk, stad, lycee, markt"
     },
     {
@@ -462,7 +462,7 @@
       "vocab_count": 35,
       "audio_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/audio.mp3",
       "text_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/text.md",
-      "titre_nl": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
+      "titre_nl": "Manon: favoriete Franse gerechten en ingredienten",
       "mots_cles_nl": "Franse keuken, ratatouille, croque-monsieur, ingredienten"
     },
     {
@@ -502,7 +502,7 @@
       "vocab_count": 35,
       "audio_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/audio.mp3",
       "text_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/text.md",
-      "titre_nl": "Décris les chanteurs populaires chez les adolescents en France.",
+      "titre_nl": "Populaire zangers bij Franse tieners",
       "mots_cles_nl": "Franse muziek, tieners, pop, rap, artiesten"
     },
     {

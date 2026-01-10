@@ -8,7 +8,7 @@ genre: femme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 15:55:33
-titre_nl: Pour ou contre l'interdiction des téléphones portables au lycée
+titre_nl: Voor of tegen een telefoonverbod op de middelbare school
 mots_cles_nl: telefoons, middelbare school, verbod, voor- en nadelen, leerlingen
 ---
 

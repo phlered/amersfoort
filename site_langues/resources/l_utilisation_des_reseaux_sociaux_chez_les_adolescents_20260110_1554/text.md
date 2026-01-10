@@ -8,7 +8,7 @@ genre: femme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 15:54:55
-titre_nl: L'utilisation des réseaux sociaux chez les adolescents
+titre_nl: Socialemediagebruik bij tieners
 mots_cles_nl: sociale media, adolescenten, communicatie, invloed, privacy
 ---
 

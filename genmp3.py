@@ -753,7 +753,7 @@ class CompressionOralApp:
 
 
 def translate_to_dutch(french_text, target_lang):
-    """Traduit un titre français en néerlandais (simple mapping)"""
+    """Traduit un titre français en néerlandais (mapping + fallback OpenAI)."""
     translations = {
         'Aller à la pharmacie': 'Naar de apotheek gaan',
         'Aller chez le médecin': 'Naar de dokter gaan',
@@ -785,7 +785,33 @@ def translate_to_dutch(french_text, target_lang):
     for fr, nl in translations.items():
         if fr.lower() in french_text.lower():
             return nl
-    return french_text  # Retourner l'original si pas de traduction
+
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("⚠️  OPENAI_API_KEY manquante, titre_nl laissé en français")
+        return french_text
+
+    try:
+        client = OpenAI(api_key=api_key)
+        translation_prompt = f"""Traduis ce titre pédagogique EN NÉERLANDAIS en conservant un format court (max 12 mots).
+Retourne uniquement le titre néerlandais, sans guillemets ni explication.
+
+Titre: {french_text}
+
+Titre en néerlandais court:"""
+
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": translation_prompt}],
+            max_tokens=60,
+            temperature=0.2
+        )
+
+        translated = response.choices[0].message.content.strip().strip("\"'.,;:! ?")
+        return translated if translated else french_text
+    except Exception as e:
+        print(f"⚠️  Erreur traduction NL: {e}")
+        return french_text
 
 def get_keywords_for_title(french_text):
     """Génère les mots-clés néerlandais pour un titre via OpenAI.

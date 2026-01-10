@@ -146,7 +146,7 @@
     "drapeau": "🇫🇷",
     "voix_variant": "fr",
     "date_generation": "2026-01-10 15:18:25",
-    "titre_nl": "Décris les chanteurs populaires chez les adolescents en France.",
+    "titre_nl": "Populaire zangers bij Franse tieners",
     "mots_cles_nl": "Franse muziek, tieners, pop, rap, artiesten"
   },
   {
@@ -221,7 +221,7 @@
     "drapeau": "🇫🇷",
     "voix_variant": "fr",
     "date_generation": "2026-01-10 14:52:16",
-    "titre_nl": "Beschrijven",
+    "titre_nl": "Jules beschrijft Toucy en het lycee Pierre Larousse",
     "mots_cles_nl": "Toucy, Frankrijk, stad, lycee, markt"
   },
   {
@@ -236,7 +236,7 @@
     "drapeau": "🇫🇷",
     "voix_variant": "fr",
     "date_generation": "2026-01-10 15:54:55",
-    "titre_nl": "L'utilisation des réseaux sociaux chez les adolescents",
+    "titre_nl": "Socialemediagebruik bij tieners",
     "mots_cles_nl": "sociale media, adolescenten, communicatie, invloed, privacy"
   },
   {
@@ -341,7 +341,7 @@
     "drapeau": "🇫🇷",
     "voix_variant": "fr",
     "date_generation": "2026-01-10 15:55:33",
-    "titre_nl": "Pour ou contre l'interdiction des téléphones portables au lycée",
+    "titre_nl": "Voor of tegen een telefoonverbod op de middelbare school",
     "mots_cles_nl": "telefoons, middelbare school, verbod, voor- en nadelen, leerlingen"
   },
   {
@@ -407,17 +407,17 @@
   {
     "id": "tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519",
     "source": "docs/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/text.md",
-    "prompt": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
-    "resume": "Mes plats préférés en France",
-    "langue": "Français",
-    "niveau": "A1",
-    "longueur": 150,
-    "genre": "homme",
-    "drapeau": "🇫🇷",
-    "voix_variant": "fr",
-    "date_generation": "2026-01-10 15:19:20",
-    "titre_nl": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
-    "mots_cles_nl": "Franse keuken, ratatouille, croque-monsieur, ingredienten"
+    "prompt": null,
+    "resume": null,
+    "langue": null,
+    "niveau": null,
+    "longueur": null,
+    "genre": null,
+    "drapeau": null,
+    "voix_variant": null,
+    "date_generation": null,
+    "titre_nl": null,
+    "mots_cles_nl": null
   },
   {
     "id": "tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451",
@@ -431,7 +431,7 @@
     "drapeau": "🇫🇷",
     "voix_variant": "fr",
     "date_generation": "2026-01-10 14:51:21",
-    "titre_nl": "Beschrijven",
+    "titre_nl": "Niels beschrijft Amersfoort aan Jules",
     "mots_cles_nl": "Amersfoort, Nederland, historische stad, kanalen, markt, park"
   },
   {
