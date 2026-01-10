@@ -5,7 +5,15 @@
 case "$1" in
     build)
         echo "🔨 Site genereren..."
-        python3 build_site.py
+        if python3 build_site.py; then
+            echo "🗂️ Prompt-index bijwerken..."
+            python3 update_prompt_index.py
+            echo "📋 Prompt-lijst genereren..."
+            python3 generate_prompts_list.py
+        else
+            echo "❌ Build mislukt, prompt-index overgeslagen"
+            exit 1
+        fi
         ;;
     serve)
         echo "🌐 Lokale server starten op http://localhost:8000"
