@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-10T15:46:28.258065",
-  "total_resources": 27,
+  "generated_at": "2026-01-10T15:56:12.933038",
+  "total_resources": 29,
   "languages": [
     "fr"
   ],
@@ -44,6 +44,26 @@
       "text_path": "resources/es_tu_deja_alle_en_f_20260101_1944/text.md",
       "titre_nl": "Reis naar Frankrijk",
       "mots_cles_nl": "Frankrijk, reis, vakantie, bezoek"
+    },
+    {
+      "id": "l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554",
+      "langue": "fr",
+      "prompt": "L'utilisation des réseaux sociaux chez les adolescents",
+      "resume": "L'utilisation des réseaux sociaux chez les adolescents",
+      "niveau": "B1",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:54:55",
+      "longueur": 250,
+      "text_preview": "Les réseaux sociaux occupent aujourd'hui une place très importante dans la vie des adolescents. Ils offrent des possibilités de communication et de partage sans précédent. Grâce à des plateformes comm...",
+      "vocab_count": 35,
+      "audio_path": "resources/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/audio.mp3",
+      "text_path": "resources/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/text.md",
+      "titre_nl": "L'utilisation des réseaux sociaux chez les adolescents",
+      "mots_cles_nl": "sociale media, adolescenten, communicatie, invloed, privacy"
     },
     {
       "id": "faire_les_courses_au_20251216_0837",
@@ -304,6 +324,26 @@
       "text_path": "resources/le_rechauffement_climatique_20260106_2300/text.md",
       "titre_nl": "Klimaatopwarming",
       "mots_cles_nl": "klimaat, milieu, opwarming, aarde"
+    },
+    {
+      "id": "pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555",
+      "langue": "fr",
+      "prompt": "Pour ou contre l'interdiction des téléphones portables au lycée",
+      "resume": "L'interdiction des téléphones portables au lycée",
+      "niveau": "B1",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:55:33",
+      "longueur": 250,
+      "text_preview": "L'utilisation des téléphones portables au lycée est un sujet qui suscite beaucoup de débats. D'un côté, certains pensent que leur interdiction est essentielle pour plusieurs raisons. Tout d'abord, les...",
+      "vocab_count": 34,
+      "audio_path": "resources/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/audio.mp3",
+      "text_path": "resources/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/text.md",
+      "titre_nl": "Pour ou contre l'interdiction des téléphones portables au lycée",
+      "mots_cles_nl": "telefoons, middelbare school, verbod, voor- en nadelen, leerlingen"
     },
     {
       "id": "le_repas_de_noel_en_20260101_1655",

@@ -1,3 +1,5 @@
+B1 | Pour ou contre l'interdiction des téléphones portables au lycée
+B1 | L'utilisation des réseaux sociaux chez les adolescents
 A1 | Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients
 A1 | Décris les chanteurs populaires chez les adolescents en France.
 A2 | Jules qui habite Toucy en France écrit à Niels pour lui décrire sa ville et le lycée Pierre Larousse

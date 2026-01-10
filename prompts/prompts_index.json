@@ -225,6 +225,21 @@
     "mots_cles_nl": "Toucy, Frankrijk, stad, lycee, markt"
   },
   {
+    "id": "l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554",
+    "source": "docs/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/text.md",
+    "prompt": "L'utilisation des réseaux sociaux chez les adolescents",
+    "resume": "L'utilisation des réseaux sociaux chez les adolescents",
+    "langue": "Français",
+    "niveau": "B1",
+    "longueur": 250,
+    "genre": "femme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-10 15:54:55",
+    "titre_nl": "L'utilisation des réseaux sociaux chez les adolescents",
+    "mots_cles_nl": "sociale media, adolescenten, communicatie, invloed, privacy"
+  },
+  {
     "id": "le_rechauffement_climatique_20260106_2300",
     "source": "docs/le_rechauffement_climatique_20260106_2300/text.md",
     "prompt": "Le réchauffement climatique",
@@ -313,6 +328,21 @@
     "date_generation": "2025-12-16 08:38:02",
     "titre_nl": "Mijn dagelijkse routine",
     "mots_cles_nl": "dagelijkse routine, student, universiteit, maaltijden, vrije tijd"
+  },
+  {
+    "id": "pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555",
+    "source": "docs/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/text.md",
+    "prompt": "Pour ou contre l'interdiction des téléphones portables au lycée",
+    "resume": "L'interdiction des téléphones portables au lycée",
+    "langue": "Français",
+    "niveau": "B1",
+    "longueur": 250,
+    "genre": "femme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-10 15:55:33",
+    "titre_nl": "Pour ou contre l'interdiction des téléphones portables au lycée",
+    "mots_cles_nl": "telefoons, middelbare school, verbod, voor- en nadelen, leerlingen"
   },
   {
     "id": "preparer_un_repas_de_20260102_1046",
