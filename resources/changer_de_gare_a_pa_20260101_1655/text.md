@@ -7,7 +7,7 @@ niveau: A1
 prompt: Changer De Gare À Pa
 resume: Changer De Gare À Pa
 titre_nl: Van station wisselen in Parijs
-mots_cles_nl: Frans, leren, woordenschat, oefening
+mots_cles_nl: Parijs, metro, overstappen, Gare du Nord, Gare de Lyon
 ---
 
 ## Texte

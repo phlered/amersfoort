@@ -7,7 +7,7 @@ niveau: A1
 genre: femme
 date_generation: 2025-12-16 08:36:59
 titre_nl: Jezelf voorstellen
-mots_cles_nl: Frans, leren, woordenschat, oefening
+mots_cles_nl: jezelf voorstellen, familie, hobby, universiteit, muziek
 ---
 
 ## Texte

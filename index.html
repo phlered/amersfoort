@@ -254,7 +254,7 @@
                 <div class="feature-icon">🎵</div>
                 <div class="feature-text">
                     <div class="feature-title">Audio Lessons</div>
-                    <div>36 Franse luisteroefeningen op verschillende niveaus</div>
+                    <div id="audio-lessons-copy">Franse luisteroefeningen op verschillende niveaus</div>
                 </div>
             </a>
             <a href="vocab.html?lang=fr" class="feature feature-link">
@@ -287,5 +287,25 @@
             <p>Powered by AI-generated content</p>
         </div>
     </div>
+    <script>
+        (async () => {
+            const copyEl = document.getElementById('audio-lessons-copy');
+            if (!copyEl) return;
+
+            try {
+                const res = await fetch('metadata.json', { cache: 'no-cache' });
+                if (!res.ok) return;
+
+                const data = await res.json();
+                const resources = Array.isArray(data?.resources) ? data.resources : [];
+                const frCount = resources.filter(r => r.langue === 'fr').length;
+                if (frCount > 0) {
+                    copyEl.textContent = `${frCount} Franse luisteroefeningen op verschillende niveaus`;
+                }
+            } catch (err) {
+                // If metadata cannot be loaded, keep the static fallback text.
+            }
+        })();
+    </script>
 </body>
 </html>

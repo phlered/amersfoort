@@ -1,10 +1,30 @@
 {
-  "generated_at": "2026-01-09T20:51:24.002619",
-  "total_resources": 23,
+  "generated_at": "2026-01-10T16:02:29.295443",
+  "total_resources": 29,
   "languages": [
     "fr"
   ],
   "resources": [
+    {
+      "id": "tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451",
+      "langue": "fr",
+      "prompt": "Tu t'appelles Niels et tu habites Amersfoort. Tu écris un mail à ton correspondant Français Jules pour lui décrire ta ville",
+      "resume": "Amersfoort en Hollande",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 14:51:21",
+      "longueur": 200,
+      "text_preview": "Objet : Découvre ma ville, Amersfoort\n\nSalut Jules,\n\nJ'espère que tu vas bien. Je suis content d'échanger avec toi et aujourd'hui, je vais te parler de ma ville, Amersfoort.\n\nAmersfoort est une ville ...",
+      "vocab_count": 34,
+      "audio_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/audio.mp3",
+      "text_path": "resources/tu_t_appelles_niels_et_tu_habites_amersfoort_tu_ecris_un_mai_20260110_1451/text.md",
+      "titre_nl": "Beschrijven",
+      "mots_cles_nl": "Amersfoort, Nederland, historische stad, kanalen, markt, park"
+    },
     {
       "id": "es_tu_deja_alle_en_f_20260101_1944",
       "langue": "fr",
@@ -24,6 +44,26 @@
       "text_path": "resources/es_tu_deja_alle_en_f_20260101_1944/text.md",
       "titre_nl": "Reis naar Frankrijk",
       "mots_cles_nl": "Frankrijk, reis, vakantie, bezoek"
+    },
+    {
+      "id": "l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554",
+      "langue": "fr",
+      "prompt": "L'utilisation des réseaux sociaux chez les adolescents",
+      "resume": "L'utilisation des réseaux sociaux chez les adolescents",
+      "niveau": "B1",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:54:55",
+      "longueur": 250,
+      "text_preview": "Les réseaux sociaux occupent aujourd'hui une place très importante dans la vie des adolescents. Ils offrent des possibilités de communication et de partage sans précédent. Grâce à des plateformes comm...",
+      "vocab_count": 35,
+      "audio_path": "resources/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/audio.mp3",
+      "text_path": "resources/l_utilisation_des_reseaux_sociaux_chez_les_adolescents_20260110_1554/text.md",
+      "titre_nl": "L'utilisation des réseaux sociaux chez les adolescents",
+      "mots_cles_nl": "sociale media, adolescenten, communicatie, invloed, privacy"
     },
     {
       "id": "faire_les_courses_au_20251216_0837",
@@ -88,7 +128,7 @@
     {
       "id": "mon_logement_20260104_1641",
       "langue": "fr",
-      "prompt": "**Mon logement**",
+      "prompt": "Mon logement",
       "resume": "Mon logement",
       "niveau": "A1",
       "classe": "",
@@ -128,7 +168,7 @@
     {
       "id": "ma_famille_20260104_1640",
       "langue": "fr",
-      "prompt": "**Ma famille**",
+      "prompt": "Ma famille",
       "resume": "Ma famille",
       "niveau": "A1",
       "classe": "",
@@ -183,12 +223,12 @@
       "audio_path": "resources/se_presenter_20251216_0836/audio.mp3",
       "text_path": "resources/se_presenter_20251216_0836/text.md",
       "titre_nl": "Jezelf voorstellen",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "jezelf voorstellen, familie, hobby, universiteit, muziek"
     },
     {
       "id": "une_journee_typiqu_20260104_1634",
       "langue": "fr",
-      "prompt": "**Une journée typique**",
+      "prompt": "Une journée typique",
       "resume": "Une journée typique",
       "niveau": "A1",
       "classe": "",
@@ -223,7 +263,7 @@
       "audio_path": "resources/changer_de_gare_a_pa_20260101_1655/audio.mp3",
       "text_path": "resources/changer_de_gare_a_pa_20260101_1655/text.md",
       "titre_nl": "Van station wisselen in Parijs",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "Parijs, metro, overstappen, Gare du Nord, Gare de Lyon"
     },
     {
       "id": "ma_maison_et_les_pie_20251216_0837",
@@ -286,6 +326,26 @@
       "mots_cles_nl": "klimaat, milieu, opwarming, aarde"
     },
     {
+      "id": "pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555",
+      "langue": "fr",
+      "prompt": "Pour ou contre l'interdiction des téléphones portables au lycée",
+      "resume": "L'interdiction des téléphones portables au lycée",
+      "niveau": "B1",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:55:33",
+      "longueur": 250,
+      "text_preview": "L'utilisation des téléphones portables au lycée est un sujet qui suscite beaucoup de débats. D'un côté, certains pensent que leur interdiction est essentielle pour plusieurs raisons. Tout d'abord, les...",
+      "vocab_count": 34,
+      "audio_path": "resources/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/audio.mp3",
+      "text_path": "resources/pour_ou_contre_l_interdiction_des_telephones_portables_au_ly_20260110_1555/text.md",
+      "titre_nl": "Pour ou contre l'interdiction des téléphones portables au lycée",
+      "mots_cles_nl": "telefoons, middelbare school, verbod, voor- en nadelen, leerlingen"
+    },
+    {
       "id": "le_repas_de_noel_en_20260101_1655",
       "langue": "fr",
       "prompt": "Le repas de Noël en France",
@@ -304,6 +364,26 @@
       "text_path": "resources/le_repas_de_noel_en_20260101_1655/text.md",
       "titre_nl": "Het Kerstdiner",
       "mots_cles_nl": "Kerstmis, feest, diner, familie, eten"
+    },
+    {
+      "id": "jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452",
+      "langue": "fr",
+      "prompt": "Jules qui habite Toucy en France écrit à Niels pour lui décrire sa ville et le lycée Pierre Larousse",
+      "resume": "Toucy et le lycée Pierre Larousse",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 14:52:16",
+      "longueur": 200,
+      "text_preview": "Salut Niels,\n\nComment ça va ? Moi, ça va bien. Je veux te parler de ma ville, Toucy, en France. Toucy est une petite ville, mais elle est jolie. Il y a environ 2 800 habitants ici. C’est calme et les ...",
+      "vocab_count": 35,
+      "audio_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/audio.mp3",
+      "text_path": "resources/jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452/text.md",
+      "titre_nl": "Beschrijven",
+      "mots_cles_nl": "Toucy, Frankrijk, stad, lycee, markt"
     },
     {
       "id": "tu_es_francais_ecri_20260104_1519",
@@ -363,7 +443,27 @@
       "audio_path": "resources/ma_routine_quotidien_20251216_0837/audio.mp3",
       "text_path": "resources/ma_routine_quotidien_20251216_0837/text.md",
       "titre_nl": "Mijn dagelijkse routine",
-      "mots_cles_nl": "Frans, leren, woordenschat, oefening"
+      "mots_cles_nl": "dagelijkse routine, student, universiteit, maaltijden, vrije tijd"
+    },
+    {
+      "id": "tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519",
+      "langue": "fr",
+      "prompt": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
+      "resume": "Mes plats préférés en France",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:19:20",
+      "longueur": 150,
+      "text_preview": "Bonjour,\n\nJe m'appelle Manon et j'habite en France. J'aime beaucoup manger. Mes plats préférés sont la ratatouille et le croque-monsieur. La ratatouille est un plat avec beaucoup de légumes. Il y a de...",
+      "vocab_count": 35,
+      "audio_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/audio.mp3",
+      "text_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/text.md",
+      "titre_nl": "Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients",
+      "mots_cles_nl": "Franse keuken, ratatouille, croque-monsieur, ingredienten"
     },
     {
       "id": "decris_ta_maison_a_l_20260104_1520",
@@ -384,6 +484,26 @@
       "text_path": "resources/decris_ta_maison_a_l_20260104_1520/text.md",
       "titre_nl": "Beschrijf je huis",
       "mots_cles_nl": "huis, woning, kamer, interieur"
+    },
+    {
+      "id": "decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518",
+      "langue": "fr",
+      "prompt": "Décris les chanteurs populaires chez les adolescents en France.",
+      "resume": "Les chanteurs populaires chez les adolescents en France",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-10 15:18:25",
+      "longueur": 150,
+      "text_preview": "Les adolescents en France aiment beaucoup la musique. Il y a plusieurs chanteurs populaires qu'ils écoutent souvent. Par exemple, Aya Nakamura est très connue. Elle chante des chansons avec des rythme...",
+      "vocab_count": 35,
+      "audio_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/audio.mp3",
+      "text_path": "resources/decris_les_chanteurs_populaires_chez_les_adolescents_en_fran_20260110_1518/text.md",
+      "titre_nl": "Décris les chanteurs populaires chez les adolescents en France.",
+      "mots_cles_nl": "Franse muziek, tieners, pop, rap, artiesten"
     },
     {
       "id": "quel_est_ton_sport_p_20260101_1944",
@@ -408,7 +528,7 @@
     {
       "id": "au_cafe_20260104_1652",
       "langue": "fr",
-      "prompt": "**Au café**",
+      "prompt": "Au café",
       "resume": "Le café",
       "niveau": "A1",
       "classe": "",
