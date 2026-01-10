@@ -10,10 +10,10 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
 # Vérifier que Flask est installé
-if ! .venv312/bin/python -c "import flask" 2>/dev/null; then
+if ! python -c "import flask" 2>/dev/null; then
     echo "❌ Flask n'est pas installé"
     echo "📦 Installation de Flask..."
-    .venv312/bin/pip install flask
+    pip install flask
 fi
 
 # Récupérer les arguments
@@ -59,4 +59,4 @@ else
     DEBUG_FLAG=""
 fi
 
-.venv312/bin/python batch_server.py --port "$PORT" $DEBUG_FLAG
+python batch_server.py --port "$PORT" $DEBUG_FLAG

@@ -62,7 +62,7 @@ class BatchGenerator:
         self.dry_run = dry_run
         self.delai_entre_generations = delai_entre_generations
         self.ssml = ssml
-        self.python_exe = ".venv312/bin/python"
+        self.python_exe = "python"
 
     @staticmethod
     def _default_length_for_level(niveau: str) -> int:

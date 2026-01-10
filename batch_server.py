@@ -37,7 +37,7 @@ class BatchProcessor:
     
     def __init__(self, project_root: str = "."):
         self.project_root = Path(project_root)
-        self.python_exe = str(self.project_root / ".venv312" / "bin" / "python")
+        self.python_exe = "python"
         
     def process_batch(self, prompt_file: str, languages: str, level: str, delay: float = 3.0, ssml: bool = False) -> Generator[str, None, None]:
         """

@@ -26,6 +26,50 @@ from voices_config import FlagMapping, VoiceVariantConfig, SpeakerAgeDetector, G
 load_dotenv()
 
 
+def convert_full_voice_name_to_short(full_voice_name):
+    """Convertit un nom de voix complet (ex: fr-FR-ClaudeNeural) en nom court (ex: claude)
+    
+    Args:
+        full_voice_name: Nom complet de la voix (ex: fr-FR-ClaudeNeural) ou nom court
+    
+    Returns:
+        Nom court de la voix en minuscules
+    """
+    if not full_voice_name:
+        return None
+    
+    # Mapping inverse des noms de voix complets vers noms courts
+    # Basé sur les mappings dans md2mp3.py
+    voice_mapping = {
+        "fr-FR-DeniseNeural": "denise",
+        "fr-FR-EloiseNeural": "eloise",
+        "fr-FR-VivienneNeural": "vivienne",
+        "fr-FR-BrigitteNeural": "brigitte",
+        "fr-FR-CelesteNeural": "celeste",
+        "fr-FR-CoralieNeural": "coralie",
+        "fr-FR-JacquelineNeural": "jacqueline",
+        "fr-FR-JosephineNeural": "josephine",
+        "fr-FR-YvetteNeural": "yvette",
+        "fr-CH-ArianeNeural": "ariane",
+        "fr-BE-CharlineNeural": "charline",
+        "fr-FR-HenriNeural": "henri",
+        "fr-FR-AlainNeural": "alain",
+        "fr-FR-ClaudeNeural": "claude",
+        "fr-FR-JeromeNeural": "jerome",
+        "fr-FR-MauriceNeural": "maurice",
+        "fr-FR-YvesNeural": "yves",
+        "fr-CH-FabriceNeural": "fabrice",
+        "fr-BE-GerardNeural": "gerard",
+    }
+    
+    # Si c'est déjà un nom court (sans tirets), retourner tel quel
+    if "-" not in full_voice_name:
+        return full_voice_name.lower()
+    
+    # Sinon, utiliser le mapping
+    return voice_mapping.get(full_voice_name, full_voice_name.lower())
+
+
 class LanguageConfig:
     """Configuration pour chaque langue supportée"""
     LANGUAGES = {
@@ -398,7 +442,7 @@ class AudioGeneratorMD2MP3:
         # Obtenir le chemin absolu du script md2mp3.py (dans le même dossier que app.py)
         script_dir = os.path.dirname(os.path.abspath(__file__))
         md2mp3_path = os.path.join(script_dir, "md2mp3.py")
-        venv_python = os.path.join(script_dir, ".venv312", "bin", "python")
+        venv_python = "python"
         
         # Commande md2mp3.py avec voix variée (pas de nom spécifique, juste genre)
         cmd = [
@@ -410,13 +454,14 @@ class AudioGeneratorMD2MP3:
             "--vitesse", str(vitesse)
         ]
         
-        # Activer SSML si demandé
+        # Ajouter SSML si demandé
         if ssml:
             cmd.append("--ssml")
         
-        # Ajouter la voix spécifique si fournie
+        # Ajouter la voix spécifique si fournie (conversion en nom court si nécessaire)
         if voix:
-            cmd.extend(["--voix", voix])
+            short_voice_name = convert_full_voice_name_to_short(voix)
+            cmd.extend(["--voix", short_voice_name])
         
         print(f"🎤 Génération de l'audio avec md2mp3.py (langue: {md2mp3_lang}, genre: {genre}, vitesse: {vitesse}x)...")
         sys.stdout.flush()
@@ -515,6 +560,14 @@ class OutputGenerator:
         age_group = SpeakerAgeDetector.detect_speaker_age_group(texte)
         voix_specifique = voix  # Utiliser la voix forcée si fournie
         
+        # Toujours définir genre_final pour utilisation dans le YAML
+        gender_detected = GenderDetector.detect_speaker_gender(texte)
+        if gender_detected:
+            genre_final = gender_detected
+            print(f"👤 Genre détecté: {gender_detected}")
+        else:
+            genre_final = genre
+        
         if not voix_specifique:
             # Construire la locale Azure (ex: "en-US" ou "es-ES")
             locale_map = {
@@ -529,14 +582,6 @@ class OutputGenerator:
                 "cor": "ko-KR"
             }
             locale = locale_map.get(voix_variant, locale_map.get(langue_code))
-            
-            # Détecter le genre du locuteur (si non forcé)
-            gender_detected = GenderDetector.detect_speaker_gender(texte)
-            if gender_detected:
-                genre_final = gender_detected
-                print(f"👤 Genre détecté: {gender_detected}")
-            else:
-                genre_final = genre
             
             # Chercher une voix adaptée selon âge et genre
             voix_candidate = VoiceSelector.select_voice_by_age_and_gender(locale, genre_final, age_group)
@@ -567,8 +612,8 @@ voix_variant: {voix_variant}
 
         yaml_header += f"date_generation: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
         # Ajouter les champs néerlandais
-        if target_lang == 'fr':  # Seulement pour le français
-            titre_nl = translate_to_dutch(prompt, target_lang)
+        if langue_code == 'fr':  # Seulement pour le français
+            titre_nl = translate_to_dutch(prompt, langue_code)
             mots_cles_nl = get_keywords_for_title(prompt)
             yaml_header += f"titre_nl: {titre_nl}\n"
             if mots_cles_nl:
