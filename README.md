@@ -88,11 +88,39 @@ AZURE_SPEECH_REGION=westeurope
 
 ## Déploiement
 
-Pour GitHub Pages :
+### Déploiement automatique (recommandé)
 
-1. Créer repo `amersfoort` sur GitHub
-2. Pousser le dossier `site_langues/` vers la branche `gh-pages`
-3. Activer GitHub Pages dans Settings
+Le site se déploie automatiquement sur GitHub Pages à chaque push sur `main` grâce à GitHub Actions :
+
+1. **Build** : Le workflow compile le site depuis `docs/`
+2. **Deploy** : Le contenu de `site_langues/` est publié sur la branche `gh-pages`
+3. **Live** : Disponible sur https://phlered.github.io/amersfoort/
+
+**Configuration** : 
+- Le workflow est dans [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
+- GitHub Pages doit être activé dans Settings → Pages → Source : `gh-pages` branch
+
+### Déploiement manuel
+
+Si besoin de déployer manuellement :
+
+```bash
+./deploy.sh
+```
+
+Ce script :
+1. Build le site avec `./site.sh build`
+2. Commit les changements sur `main`
+3. Copie `site_langues/` vers la branche `gh-pages`
+4. Push sur GitHub
+
+### Résolution de problèmes
+
+Si le site ne se met pas à jour :
+- ✅ Vérifier que le build réussit : `./site.sh build`
+- ✅ Vérifier les workflows GitHub Actions (onglet Actions)
+- ✅ S'assurer que GitHub Pages est activé dans Settings
+- ✅ Attendre 1-2 minutes pour la propagation
 
 ## Notes techniques
 
