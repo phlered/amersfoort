@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-30T19:09:54.370776",
-  "total_resources": 35,
+  "generated_at": "2026-01-30T19:20:29.039882",
+  "total_resources": 38,
   "languages": [
     "fr"
   ],
@@ -266,6 +266,26 @@
       "mots_cles_nl": "dag, routine, ochtend, avond, dagelijks"
     },
     {
+      "id": "le_tabac_chez_les_jeunes_francais_consequences_sur_la_sante_20260130_1917",
+      "langue": "fr",
+      "prompt": "Le tabac chez les jeunes français : conséquences sur la santé",
+      "resume": "Le tabac chez les jeunes français",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 19:18:01",
+      "longueur": 200,
+      "text_preview": "Le tabac est un problème important chez les jeunes en France. Beaucoup de jeunes essaient de fumer pour diverses raisons. Parfois, ils veulent faire comme leurs amis ou paraître plus adultes. Cependan...",
+      "vocab_count": 35,
+      "audio_path": "resources/le_tabac_chez_les_jeunes_francais_consequences_sur_la_sante_20260130_1917/audio.mp3",
+      "text_path": "resources/le_tabac_chez_les_jeunes_francais_consequences_sur_la_sante_20260130_1917/text.md",
+      "titre_nl": "Tabak bij Franse jongeren: gevolgen voor de gezondheid",
+      "mots_cles_nl": "tabak, jongeren, gezondheid, gevolgen, Frankrijk"
+    },
+    {
       "id": "changer_de_gare_a_pa_20260101_1655",
       "langue": "fr",
       "prompt": "Changer De Gare À Pa",
@@ -364,6 +384,26 @@
       "text_path": "resources/entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649/text.md",
       "titre_nl": "\"Verstuiking na een wandeling: bezoek aan de dokter\"",
       "mots_cles_nl": "verstuiking, wandelen, dokter, bezoek, behandeling"
+    },
+    {
+      "id": "rendez_vous_chez_le_docteur_pour_un_probleme_de_mal_de_ventr_20260130_1919",
+      "langue": "fr",
+      "prompt": "Rendez-vous chez le docteur pour un problème de mal de ventre.",
+      "resume": "Un rendez-vous chez le docteur",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 19:19:42",
+      "longueur": 200,
+      "text_preview": "Aujourd'hui, Marie a un rendez-vous chez le docteur. Elle a mal au ventre depuis trois jours. Elle est un peu inquiète parce qu'elle ne sait pas pourquoi elle a mal. À 10 heures, elle arrive au cabine...",
+      "vocab_count": 35,
+      "audio_path": "resources/rendez_vous_chez_le_docteur_pour_un_probleme_de_mal_de_ventr_20260130_1919/audio.mp3",
+      "text_path": "resources/rendez_vous_chez_le_docteur_pour_un_probleme_de_mal_de_ventr_20260130_1919/text.md",
+      "titre_nl": "Afspraak bij de dokter voor buikpijn",
+      "mots_cles_nl": "dokter, afspraak, buikpijn, symptomen, behandeling"
     },
     {
       "id": "le_rechauffement_climatique_20260106_2300",
@@ -604,6 +644,26 @@
       "text_path": "resources/quel_est_ton_sport_p_20260101_1944/text.md",
       "titre_nl": "Favoriete sport",
       "mots_cles_nl": "sport, fitness, activiteit, spel"
+    },
+    {
+      "id": "les_bienfaits_du_sport_sur_la_sante_20260130_1918",
+      "langue": "fr",
+      "prompt": "Les bienfaits du sport sur la santé",
+      "resume": "Les bienfaits du sport sur la santé",
+      "niveau": "A2",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 19:18:35",
+      "longueur": 200,
+      "text_preview": "Le sport est très important pour la santé. Quand nous faisons du sport, notre corps travaille et devient plus fort. Il y a beaucoup de sports différents comme le football, la natation, le vélo ou le y...",
+      "vocab_count": 35,
+      "audio_path": "resources/les_bienfaits_du_sport_sur_la_sante_20260130_1918/audio.mp3",
+      "text_path": "resources/les_bienfaits_du_sport_sur_la_sante_20260130_1918/text.md",
+      "titre_nl": "De voordelen van sport voor de gezondheid",
+      "mots_cles_nl": "sport, gezondheid, voordelen, lichaamsbeweging, welzijn"
     },
     {
       "id": "aller_a_la_pharmacie_pour_demander_un_medicament_contre_la_f_20260130_1658",

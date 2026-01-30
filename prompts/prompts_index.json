@@ -300,6 +300,36 @@
     "mots_cles_nl": "Kerstmis, feest, diner, familie, eten"
   },
   {
+    "id": "le_tabac_chez_les_jeunes_francais_consequences_sur_la_sante_20260130_1917",
+    "source": "docs/le_tabac_chez_les_jeunes_francais_consequences_sur_la_sante_20260130_1917/text.md",
+    "prompt": null,
+    "resume": null,
+    "langue": null,
+    "niveau": null,
+    "longueur": null,
+    "genre": null,
+    "drapeau": null,
+    "voix_variant": null,
+    "date_generation": null,
+    "titre_nl": null,
+    "mots_cles_nl": null
+  },
+  {
+    "id": "les_bienfaits_du_sport_sur_la_sante_20260130_1918",
+    "source": "docs/les_bienfaits_du_sport_sur_la_sante_20260130_1918/text.md",
+    "prompt": "Les bienfaits du sport sur la santé",
+    "resume": "Les bienfaits du sport sur la santé",
+    "langue": "Français",
+    "niveau": "A2",
+    "longueur": 200,
+    "genre": "homme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-30 19:18:35",
+    "titre_nl": "De voordelen van sport voor de gezondheid",
+    "mots_cles_nl": "sport, gezondheid, voordelen, lichaamsbeweging, welzijn"
+  },
+  {
     "id": "les_loisirs_des_jeun_20251216_0833",
     "source": "docs/les_loisirs_des_jeun_20251216_0833/text.md",
     "prompt": "Les loisirs des jeunes",
@@ -403,6 +433,21 @@
     "date_generation": "2026-01-01 19:44:43",
     "titre_nl": "Favoriete sport",
     "mots_cles_nl": "sport, fitness, activiteit, spel"
+  },
+  {
+    "id": "rendez_vous_chez_le_docteur_pour_un_probleme_de_mal_de_ventr_20260130_1919",
+    "source": "docs/rendez_vous_chez_le_docteur_pour_un_probleme_de_mal_de_ventr_20260130_1919/text.md",
+    "prompt": "Rendez-vous chez le docteur pour un problème de mal de ventre.",
+    "resume": "Un rendez-vous chez le docteur",
+    "langue": "Français",
+    "niveau": "A2",
+    "longueur": 200,
+    "genre": "homme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-30 19:19:42",
+    "titre_nl": "Afspraak bij de dokter voor buikpijn",
+    "mots_cles_nl": "dokter, afspraak, buikpijn, symptomen, behandeling"
   },
   {
     "id": "se_presenter_20251216_0836",
