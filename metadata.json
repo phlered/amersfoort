@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-10T16:10:59.271876",
-  "total_resources": 29,
+  "generated_at": "2026-01-30T16:50:08.058993",
+  "total_resources": 32,
   "languages": [
     "fr"
   ],
@@ -166,6 +166,26 @@
       "mots_cles_nl": "weer, zonnig, regen, wind, temperatuur"
     },
     {
+      "id": "visite_chez_le_docteur_suite_a_de_violents_maux_de_tete_20260130_1647",
+      "langue": "fr",
+      "prompt": "Visite chez le docteur suite à de violents maux de tête",
+      "resume": "Visite chez le docteur pour maux de tête",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 16:47:34",
+      "longueur": 150,
+      "text_preview": "Aujourd'hui, je vais chez le docteur. J'ai mal à la tête, très mal. Je me lève tôt le matin. Je prends le bus pour aller à la clinique. Dans la salle d'attente, je lis un magazine. Le docteur m'appell...",
+      "vocab_count": 35,
+      "audio_path": "resources/visite_chez_le_docteur_suite_a_de_violents_maux_de_tete_20260130_1647/audio.mp3",
+      "text_path": "resources/visite_chez_le_docteur_suite_a_de_violents_maux_de_tete_20260130_1647/text.md",
+      "titre_nl": "Bezoek aan de dokter na ernstige hoofdpijn",
+      "mots_cles_nl": "dokter, hoofdpijn, afspraak, symptomen, behandeling"
+    },
+    {
       "id": "ma_famille_20260104_1640",
       "langue": "fr",
       "prompt": "Ma famille",
@@ -304,6 +324,26 @@
       "text_path": "resources/un_repas_au_restaura_20260102_1048/text.md",
       "titre_nl": "Een maaltijd in het restaurant",
       "mots_cles_nl": "eten, restaurant, menu, bestelling, koken"
+    },
+    {
+      "id": "entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649",
+      "langue": "fr",
+      "prompt": "Entorse suite à une randonnée : visite chez le docteur",
+      "resume": "Entorse après une randonnée",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 16:49:23",
+      "longueur": 150,
+      "text_preview": "Marie aime la randonnée. Hier, elle part avec ses amis pour une longue marche. Le soleil brille et tout est parfait. Mais, soudain, Marie glisse sur un caillou. Elle tombe et sa cheville lui fait mal....",
+      "vocab_count": 35,
+      "audio_path": "resources/entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649/audio.mp3",
+      "text_path": "resources/entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649/text.md",
+      "titre_nl": "Verstuiking na een wandeling: bezoek aan de dokter",
+      "mots_cles_nl": "verstuiking, wandelen, dokter, bezoek, behandeling"
     },
     {
       "id": "le_rechauffement_climatique_20260106_2300",
@@ -564,6 +604,26 @@
       "text_path": "resources/decris_ton_dernier_w_20260101_1944/text.md",
       "titre_nl": "Laatste weekend",
       "mots_cles_nl": "weekend, vrije tijd, ontspanning"
+    },
+    {
+      "id": "visite_chez_le_docteur_suite_a_une_piqure_d_abeille_20260130_1647",
+      "langue": "fr",
+      "prompt": "Visite chez le docteur suite à une piqure d'abeille",
+      "resume": "Visite chez le docteur pour piqûre d'abeille",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 16:48:07",
+      "longueur": 150,
+      "text_preview": "Ce matin, je me promène dans le parc. Il fait beau et le soleil brille. Je regarde les fleurs. Soudain, une abeille me pique la main. Ça fait très mal! Ma main devient rouge et gonflée. Je suis inquie...",
+      "vocab_count": 35,
+      "audio_path": "resources/visite_chez_le_docteur_suite_a_une_piqure_d_abeille_20260130_1647/audio.mp3",
+      "text_path": "resources/visite_chez_le_docteur_suite_a_une_piqure_d_abeille_20260130_1647/text.md",
+      "titre_nl": "Bezoek aan de dokter na een bijensteek",
+      "mots_cles_nl": "dokter, bijensteek, allergie, behandeling, pijn"
     },
     {
       "id": "voyage_en_france_sur_20260101_1655",
