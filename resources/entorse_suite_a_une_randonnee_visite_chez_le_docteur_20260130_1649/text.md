@@ -1,14 +1,14 @@
 ---
 langue: Français
-prompt: Entorse suite à une randonnée : visite chez le docteur
-resume: Entorse après une randonnée
+prompt: "Entorse suite à une randonnée : visite chez le docteur"
+resume: "Entorse après une randonnée"
 longueur: 150
 niveau: A1
 genre: femme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-30 16:49:23
-titre_nl: Verstuiking na een wandeling: bezoek aan de dokter
+titre_nl: "Verstuiking na een wandeling: bezoek aan de dokter"
 mots_cles_nl: verstuiking, wandelen, dokter, bezoek, behandeling
 ---
 
