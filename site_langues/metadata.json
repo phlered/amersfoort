@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-30T16:59:11.982887",
+  "generated_at": "2026-01-30T19:09:54.370776",
   "total_resources": 35,
   "languages": [
     "fr"
@@ -308,8 +308,8 @@
     {
       "id": "description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657",
       "langue": "fr",
-      "prompt": "Description du corps humain : les membres supérieurs et inférieurs",
-      "resume": "Les membres supérieurs et inférieurs du corps humain",
+      "prompt": "\"Description du corps humain : les membres supérieurs et inférieurs\"",
+      "resume": "\"Les membres supérieurs et inférieurs du corps humain\"",
       "niveau": "A1",
       "classe": "",
       "axe": "",
@@ -322,7 +322,7 @@
       "vocab_count": 35,
       "audio_path": "resources/description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657/audio.mp3",
       "text_path": "resources/description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657/text.md",
-      "titre_nl": "Beschrijving van het menselijk lichaam: boven- en onderleden",
+      "titre_nl": "\"Beschrijving van het menselijk lichaam: boven- en onderleden\"",
       "mots_cles_nl": "bovenlichaam, onderlichaam, armen, benen, spieren"
     },
     {
@@ -348,8 +348,8 @@
     {
       "id": "entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649",
       "langue": "fr",
-      "prompt": "Entorse suite à une randonnée : visite chez le docteur",
-      "resume": "Entorse après une randonnée",
+      "prompt": "\"Entorse suite à une randonnée : visite chez le docteur\"",
+      "resume": "\"Entorse après une randonnée\"",
       "niveau": "A1",
       "classe": "",
       "axe": "",
@@ -362,7 +362,7 @@
       "vocab_count": 35,
       "audio_path": "resources/entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649/audio.mp3",
       "text_path": "resources/entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649/text.md",
-      "titre_nl": "Verstuiking na een wandeling: bezoek aan de dokter",
+      "titre_nl": "\"Verstuiking na een wandeling: bezoek aan de dokter\"",
       "mots_cles_nl": "verstuiking, wandelen, dokter, bezoek, behandeling"
     },
     {
@@ -542,7 +542,7 @@
       "vocab_count": 35,
       "audio_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/audio.mp3",
       "text_path": "resources/tu_t_appelles_manon_et_tu_vis_en_france_indique_quels_sont_t_20260110_1519/text.md",
-      "titre_nl": "Manon: favoriete Franse gerechten en ingredienten",
+      "titre_nl": "\"Manon: favoriete Franse gerechten en ingredienten\"",
       "mots_cles_nl": "Franse keuken, ratatouille, croque-monsieur, ingredienten"
     },
     {

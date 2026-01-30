@@ -1,14 +1,14 @@
 ---
 langue: Français
-prompt: Description du corps humain : les membres supérieurs et inférieurs
-resume: Les membres supérieurs et inférieurs du corps humain
+prompt: "Description du corps humain : les membres supérieurs et inférieurs"
+resume: "Les membres supérieurs et inférieurs du corps humain"
 longueur: 150
 niveau: A1
 genre: femme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-30 16:57:13
-titre_nl: Beschrijving van het menselijk lichaam: boven- en onderleden
+titre_nl: "Beschrijving van het menselijk lichaam: boven- en onderleden"
 mots_cles_nl: bovenlichaam, onderlichaam, armen, benen, spieren
 ---
 

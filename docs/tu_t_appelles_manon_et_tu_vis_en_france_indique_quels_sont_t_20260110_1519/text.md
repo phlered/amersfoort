@@ -8,7 +8,7 @@ genre: homme
 drapeau: 🇫🇷
 voix_variant: fr
 date_generation: 2026-01-10 15:19:20
-titre_nl: Manon: favoriete Franse gerechten en ingredienten
+titre_nl: "Manon: favoriete Franse gerechten en ingredienten"
 mots_cles_nl: Franse keuken, ratatouille, croque-monsieur, ingredienten
 ---
 

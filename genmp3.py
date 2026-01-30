@@ -400,7 +400,8 @@ class AudioGeneratorMD2MP3:
             content = f.read()
         
         # Trouver la section Text et extraire jusqu'à la section suivante
-        pattern = rf'## {re.escape(label_text)}\s*\n\n(.*?)(?=\n## |\Z)'
+        # Accepte un ou plusieurs sauts de ligne après le titre
+        pattern = rf'## {re.escape(label_text)}\s*\n+(.*?)(?=\n## |\Z)'
         match = re.search(pattern, content, re.DOTALL)
         
         if match:

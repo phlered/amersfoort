@@ -1,14 +1,16 @@
 A1 | Aller à la pharmacie pour demander un médicament contre la fièvre
+A1 | Description du corps humain : les membres supérieurs et inférieurs
 A1 | Un kinésithérapeute explique les mouvements à faire pour soulager un mal de dos
+A1 | Entorse suite à une randonnée : visite chez le docteur
 A1 | Visite chez le docteur suite à une piqure d'abeille
 A1 | Visite chez le docteur suite à de violents maux de tête
 B1 | Pour ou contre l'interdiction des téléphones portables au lycée
 B1 | L'utilisation des réseaux sociaux chez les adolescents
+A1 | Tu t'appelles Manon et tu vis en France. Indique quels sont tes plats préférés et décris à un élève hollandais leurs principaux ingrédients
 A1 | Décris les chanteurs populaires chez les adolescents en France.
 A2 | Jules qui habite Toucy en France écrit à Niels pour lui décrire sa ville et le lycée Pierre Larousse
 A2 | Tu t'appelles Niels et tu habites Amersfoort. Tu écris un mail à ton correspondant Français Jules pour lui décrire ta ville
 A2 | Le réchauffement climatique
-A1 | Faire les courses
 A1 | La météo aujourd’hui
 A1 | Mes loisirs
 A1 | Au café
@@ -32,6 +34,3 @@ A1 | Ma maison et les pièces
 A1 | Se présenter
 A2 | Les loisirs des jeunes
 A2 | Les loisirs des jeunes
-? | ?
-? | ?
-? | ?

@@ -648,8 +648,9 @@ class MarkdownCleaner:
                     dialogue_lines.append(line)
                     break
         
-        # Si plus de 30% du texte est du dialogue, c'est un dialogue
-        return len(dialogue_lines) > len(text.split('\n')) * 0.3, dialogue_lines
+        # Si plus de 50% du texte est du dialogue, c'est un dialogue
+        # (augmenté de 30% à 50% pour éviter les faux positifs sur textes narratifs avec dialogues intégrés)
+        return len(dialogue_lines) > len(text.split('\n')) * 0.5, dialogue_lines
 
     @staticmethod
     def parse_dialogue_line(line):
