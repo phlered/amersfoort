@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-30T16:50:08.058993",
-  "total_resources": 32,
+  "generated_at": "2026-01-30T16:59:11.982887",
+  "total_resources": 35,
   "languages": [
     "fr"
   ],
@@ -306,6 +306,26 @@
       "mots_cles_nl": "huis, woning, kamer, interieur, slaapkamer"
     },
     {
+      "id": "description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657",
+      "langue": "fr",
+      "prompt": "Description du corps humain : les membres supérieurs et inférieurs",
+      "resume": "Les membres supérieurs et inférieurs du corps humain",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "femme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 16:57:13",
+      "longueur": 150,
+      "text_preview": "Le corps humain a deux parties principales : le haut du corps et le bas du corps. Les membres supérieurs sont les bras. Chaque bras a une épaule, un coude et une main. La main a cinq doigts. Les doigt...",
+      "vocab_count": 35,
+      "audio_path": "resources/description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657/audio.mp3",
+      "text_path": "resources/description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657/text.md",
+      "titre_nl": "Beschrijving van het menselijk lichaam: boven- en onderleden",
+      "mots_cles_nl": "bovenlichaam, onderlichaam, armen, benen, spieren"
+    },
+    {
       "id": "un_repas_au_restaura_20260102_1048",
       "langue": "fr",
       "prompt": "Un repas au restaurant",
@@ -404,6 +424,26 @@
       "text_path": "resources/le_repas_de_noel_en_20260101_1655/text.md",
       "titre_nl": "Het Kerstdiner",
       "mots_cles_nl": "Kerstmis, feest, diner, familie, eten"
+    },
+    {
+      "id": "un_kinesitherapeute_explique_les_mouvements_a_faire_pour_sou_20260130_1656",
+      "langue": "fr",
+      "prompt": "Un kinésithérapeute explique les mouvements à faire pour soulager un mal de dos",
+      "resume": "Les mouvements pour soulager un mal de dos",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 16:56:44",
+      "longueur": 150,
+      "text_preview": "Bonjour! Je suis kinésithérapeute. Aujourd'hui, je vais expliquer des mouvements simples pour le mal de dos. Ces mouvements aident à se sentir mieux.\n\nD'abord, asseyez-vous sur une chaise. Gardez le d...",
+      "vocab_count": 36,
+      "audio_path": "resources/un_kinesitherapeute_explique_les_mouvements_a_faire_pour_sou_20260130_1656/audio.mp3",
+      "text_path": "resources/un_kinesitherapeute_explique_les_mouvements_a_faire_pour_sou_20260130_1656/text.md",
+      "titre_nl": "Een fysiotherapeut legt oefeningen uit voor rugpijnverlichting",
+      "mots_cles_nl": "fysiotherapie, rugpijn, oefeningen, bewegingen, verlichting"
     },
     {
       "id": "jules_qui_habite_toucy_en_france_ecrit_a_niels_pour_lui_decr_20260110_1452",
@@ -564,6 +604,26 @@
       "text_path": "resources/quel_est_ton_sport_p_20260101_1944/text.md",
       "titre_nl": "Favoriete sport",
       "mots_cles_nl": "sport, fitness, activiteit, spel"
+    },
+    {
+      "id": "aller_a_la_pharmacie_pour_demander_un_medicament_contre_la_f_20260130_1658",
+      "langue": "fr",
+      "prompt": "Aller à la pharmacie pour demander un médicament contre la fièvre",
+      "resume": "Demander un médicament contre la fièvre",
+      "niveau": "A1",
+      "classe": "",
+      "axe": "",
+      "genre": "homme",
+      "drapeau": "🇫🇷",
+      "voix_variant": "fr",
+      "date": "2026-01-30 16:58:22",
+      "longueur": 150,
+      "text_preview": "Je suis malade. J'ai de la fièvre. Je vais à la pharmacie. La pharmacie est près de ma maison. Je mets mon manteau et je sors. Je marche dans la rue. Je vois la pharmacie. Je pousse la porte et j'entr...",
+      "vocab_count": 36,
+      "audio_path": "resources/aller_a_la_pharmacie_pour_demander_un_medicament_contre_la_f_20260130_1658/audio.mp3",
+      "text_path": "resources/aller_a_la_pharmacie_pour_demander_un_medicament_contre_la_f_20260130_1658/text.md",
+      "titre_nl": "Naar de apotheek gaan",
+      "mots_cles_nl": "apotheek, medicijn, koorts, vragen, gezondheid"
     },
     {
       "id": "au_cafe_20260104_1652",

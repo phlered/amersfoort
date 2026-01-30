@@ -1,3 +1,5 @@
+A1 | Aller à la pharmacie pour demander un médicament contre la fièvre
+A1 | Un kinésithérapeute explique les mouvements à faire pour soulager un mal de dos
 A1 | Visite chez le docteur suite à une piqure d'abeille
 A1 | Visite chez le docteur suite à de violents maux de tête
 B1 | Pour ou contre l'interdiction des téléphones portables au lycée
@@ -30,5 +32,6 @@ A1 | Ma maison et les pièces
 A1 | Se présenter
 A2 | Les loisirs des jeunes
 A2 | Les loisirs des jeunes
+? | ?
 ? | ?
 ? | ?

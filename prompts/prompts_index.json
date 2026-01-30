@@ -105,6 +105,21 @@
     "mots_cles_nl": "dag, routine, ochtend, avond, dagelijks"
   },
   {
+    "id": "aller_a_la_pharmacie_pour_demander_un_medicament_contre_la_f_20260130_1658",
+    "source": "docs/aller_a_la_pharmacie_pour_demander_un_medicament_contre_la_f_20260130_1658/text.md",
+    "prompt": "Aller à la pharmacie pour demander un médicament contre la fièvre",
+    "resume": "Demander un médicament contre la fièvre",
+    "langue": "Français",
+    "niveau": "A1",
+    "longueur": 150,
+    "genre": "homme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-30 16:58:22",
+    "titre_nl": "Naar de apotheek gaan",
+    "mots_cles_nl": "apotheek, medicijn, koorts, vragen, gezondheid"
+  },
+  {
     "id": "celebrer_un_annivers_20260102_1045",
     "source": "docs/celebrer_un_annivers_20260102_1045/text.md",
     "prompt": "Célébrer un anniversaire",
@@ -178,6 +193,21 @@
     "date_generation": "2026-01-01 19:44:29",
     "titre_nl": "Laatste weekend",
     "mots_cles_nl": "weekend, vrije tijd, ontspanning"
+  },
+  {
+    "id": "description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657",
+    "source": "docs/description_du_corps_humain_les_membres_superieurs_et_inferi_20260130_1657/text.md",
+    "prompt": null,
+    "resume": null,
+    "langue": null,
+    "niveau": null,
+    "longueur": null,
+    "genre": null,
+    "drapeau": null,
+    "voix_variant": null,
+    "date_generation": null,
+    "titre_nl": null,
+    "mots_cles_nl": null
   },
   {
     "id": "entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649",
@@ -448,6 +478,21 @@
     "date_generation": "2026-01-10 14:51:21",
     "titre_nl": "Niels beschrijft Amersfoort aan Jules",
     "mots_cles_nl": "Amersfoort, Nederland, historische stad, kanalen, markt, park"
+  },
+  {
+    "id": "un_kinesitherapeute_explique_les_mouvements_a_faire_pour_sou_20260130_1656",
+    "source": "docs/un_kinesitherapeute_explique_les_mouvements_a_faire_pour_sou_20260130_1656/text.md",
+    "prompt": "Un kinésithérapeute explique les mouvements à faire pour soulager un mal de dos",
+    "resume": "Les mouvements pour soulager un mal de dos",
+    "langue": "Français",
+    "niveau": "A1",
+    "longueur": 150,
+    "genre": "homme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-30 16:56:44",
+    "titre_nl": "Een fysiotherapeut legt oefeningen uit voor rugpijnverlichting",
+    "mots_cles_nl": "fysiotherapie, rugpijn, oefeningen, bewegingen, verlichting"
   },
   {
     "id": "un_repas_au_restaura_20260102_1048",
