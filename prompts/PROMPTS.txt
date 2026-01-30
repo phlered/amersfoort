@@ -1,3 +1,5 @@
+A1 | Visite chez le docteur suite à une piqure d'abeille
+A1 | Visite chez le docteur suite à de violents maux de tête
 B1 | Pour ou contre l'interdiction des téléphones portables au lycée
 B1 | L'utilisation des réseaux sociaux chez les adolescents
 A1 | Décris les chanteurs populaires chez les adolescents en France.
@@ -28,4 +30,5 @@ A1 | Ma maison et les pièces
 A1 | Se présenter
 A2 | Les loisirs des jeunes
 A2 | Les loisirs des jeunes
+? | ?
 ? | ?

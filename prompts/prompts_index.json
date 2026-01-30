@@ -180,6 +180,21 @@
     "mots_cles_nl": "weekend, vrije tijd, ontspanning"
   },
   {
+    "id": "entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649",
+    "source": "docs/entorse_suite_a_une_randonnee_visite_chez_le_docteur_20260130_1649/text.md",
+    "prompt": null,
+    "resume": null,
+    "langue": null,
+    "niveau": null,
+    "longueur": null,
+    "genre": null,
+    "drapeau": null,
+    "voix_variant": null,
+    "date_generation": null,
+    "titre_nl": null,
+    "mots_cles_nl": null
+  },
+  {
     "id": "es-tu_dejà_alle_en_f_20260101_1944",
     "source": "docs/es-tu_dejà_alle_en_f_20260101_1944/text.md",
     "prompt": "Es-tu déjà allé en France avec tes parents ? Qu'est ce qui t'a plus lors de ton voyage ?",
@@ -448,6 +463,36 @@
     "date_generation": "2026-01-02 10:48:37",
     "titre_nl": "Een maaltijd in het restaurant",
     "mots_cles_nl": "eten, restaurant, menu, bestelling, koken"
+  },
+  {
+    "id": "visite_chez_le_docteur_suite_a_de_violents_maux_de_tete_20260130_1647",
+    "source": "docs/visite_chez_le_docteur_suite_a_de_violents_maux_de_tete_20260130_1647/text.md",
+    "prompt": "Visite chez le docteur suite à de violents maux de tête",
+    "resume": "Visite chez le docteur pour maux de tête",
+    "langue": "Français",
+    "niveau": "A1",
+    "longueur": 150,
+    "genre": "homme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-30 16:47:34",
+    "titre_nl": "Bezoek aan de dokter na ernstige hoofdpijn",
+    "mots_cles_nl": "dokter, hoofdpijn, afspraak, symptomen, behandeling"
+  },
+  {
+    "id": "visite_chez_le_docteur_suite_a_une_piqure_d_abeille_20260130_1647",
+    "source": "docs/visite_chez_le_docteur_suite_a_une_piqure_d_abeille_20260130_1647/text.md",
+    "prompt": "Visite chez le docteur suite à une piqure d'abeille",
+    "resume": "Visite chez le docteur pour piqûre d'abeille",
+    "langue": "Français",
+    "niveau": "A1",
+    "longueur": 150,
+    "genre": "homme",
+    "drapeau": "🇫🇷",
+    "voix_variant": "fr",
+    "date_generation": "2026-01-30 16:48:07",
+    "titre_nl": "Bezoek aan de dokter na een bijensteek",
+    "mots_cles_nl": "dokter, bijensteek, allergie, behandeling, pijn"
   },
   {
     "id": "voyage_en_france_sur_20260101_1655",
